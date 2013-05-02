@@ -1,1 +1,1 @@
-bienvenidos a nuestro proyecto de formacion SOFMADE echo con ruby on rails version de ruby 1.9.3 y version de rails 3.2.8 
+bienvenidos a nuestro proyecto de formacion SOFMADE echo con ruby on rails version de ruby 1.9.3 y version de rails 3.2.13
