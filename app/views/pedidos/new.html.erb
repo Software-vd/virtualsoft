@@ -1,0 +1,7 @@
+<%- model_class = Pedido -%>
+<center>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'Nuevo %{model}'], :model => model_class.model_name.human %></h1>
+</div>
+<%= render :partial => 'form' %>
+</center>

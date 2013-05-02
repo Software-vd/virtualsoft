@@ -1,0 +1,44 @@
+<%- model_class = Pedido -%>
+<center>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<center><dl class="dl-horizontal"></center>
+  <dt><strong><%= model_class.human_attribute_name(:Fecha) %>:</strong></dt>
+  <br>
+  <dd><%= @pedido.Fecha %></dd>
+  <br>
+  <dt><strong><%= model_class.human_attribute_name(:Numero_pedido) %>:</strong></dt>
+  <br>
+  <dd><%= @pedido.Numero_pedido %></dd>
+  <br>
+  <dt><strong><%= model_class.human_attribute_name(:Cantidad) %>:</strong></dt>
+  <br>
+  <dd><%= @pedido.Cantidad %></dd>
+  <br>
+  <dt><strong><%= model_class.human_attribute_name(:producto_id) %>:</strong></dt>
+  <br>
+  <dd><%= @pedido.producto_id %></dd>
+  <br>
+  <dt><strong><%= model_class.human_attribute_name(:cliente_id) %>:</strong></dt>
+  <br>
+  <dd><%= @pedido.cliente_id %></dd>
+  <br>
+  <dt><strong><%= model_class.human_attribute_name(:valor_id) %>:</strong></dt>
+  <br>
+  <dd><%= @pedido.valor_id %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.Atras")),
+              pedidos_path, :class => 'btn btn-inverse'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.Editar")),
+              edit_pedido_path(@pedido), :class => 'btn btn-info' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
+              pedido_path(@pedido),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Esta seguro?')) },
+              :class => 'btn btn-danger' %>
+</div>
+</center>

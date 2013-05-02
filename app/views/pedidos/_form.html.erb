@@ -1,0 +1,13 @@
+<center><%= simple_form_for @pedido, :html => { :class => 'form-horizontal' } do |f| %></center>
+  <%= f.input :Fecha %>
+  <%= f.input :Numero_pedido %>
+  <%= f.input :Cantidad %>
+  <%= f.input :producto_id %>
+  <%= f.input :cliente_id %>
+  <%= f.input :valor_id %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-success' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
+                pedidos_path, :class => 'btn btn-inverse' %>
+  </div>
+<% end %>

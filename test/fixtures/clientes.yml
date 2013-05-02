@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tipodoc_id: 1
+  Numero_documento: MyString
+  Nombres: MyString
+  Apellidos: MyString
+  Telefono: MyString
+  Celular: MyString
+
+two:
+  tipodoc_id: 1
+  Numero_documento: MyString
+  Nombres: MyString
+  Apellidos: MyString
+  Telefono: MyString
+  Celular: MyString

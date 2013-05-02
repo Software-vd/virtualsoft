@@ -1,0 +1,54 @@
+<%- model_class = Cliente -%>
+<br>
+<hr>
+<br>
+<center><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAmB009KJiqqu27XS_-GsJvbf6g5e9Drj2U3Vye4xu8ne_67M9Jw"></center>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:tipodoc_id) %></th>
+      <th><%= model_class.human_attribute_name(:Numero_documento) %></th>
+      <th><%= model_class.human_attribute_name(:Nombres) %></th>
+      <th><%= model_class.human_attribute_name(:Apellidos) %></th>
+      <th><%= model_class.human_attribute_name(:Telefono) %></th>
+      <th><%= model_class.human_attribute_name(:Celular) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= link_to cliente.id, cliente_path(cliente) %></td>
+        <td><%= cliente.tipodoc_id %></td>
+        <td><%= cliente.Numero_documento %></td>
+        <td><%= cliente.Nombres %></td>
+        <td><%= cliente.Apellidos %></td>
+        <td><%= cliente.Telefono %></td>
+        <td><%= cliente.Celular %></td>
+        <td><%=l cliente.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.Editar")),
+                      edit_cliente_path(cliente), :class => 'btn btn-mini btn-inverse' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
+                      cliente_path(cliente),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Esta seguro?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<center>
+<%= link_to t('.new', :default => t("helpers.links.Nuevo")),
+            new_cliente_path,
+            :class => 'btn btn-inverse' %>
+</center>
