@@ -1,3 +1,7 @@
+<br>
+<br>
+<br>
+<hr>
 <%- model_class = Tipodoc -%>
 <center>
 <div class="page-header">
@@ -23,7 +27,7 @@
         <td><%=l tipodoc.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.Editar")),
-                      edit_tipodoc_path(tipodoc), :class => 'btn btn-mini btn-info' %>
+                      edit_tipodoc_path(tipodoc), :class => 'btn btn-mini btn-inverse' %>
           <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
                       tipodoc_path(tipodoc),
                       :method => :delete,

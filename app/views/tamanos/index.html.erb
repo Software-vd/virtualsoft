@@ -1,3 +1,7 @@
+<br>
+<br>
+<br>
+<hr>
 <%- model_class = Tamano -%>
 <center>
 <div class="page-header">
@@ -21,7 +25,7 @@
         <td><%=l tamano.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.Editar")),
-                      edit_tamano_path(tamano), :class => 'btn btn-mini btn-info' %>
+                      edit_tamano_path(tamano), :class => 'btn btn-mini btn-inverse' %>
           <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
                       tamano_path(tamano),
                       :method => :delete,

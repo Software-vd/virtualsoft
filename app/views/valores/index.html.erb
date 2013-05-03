@@ -1,3 +1,4 @@
+<hr>
 <%- model_class = Valor -%>
 <br>
 <hr>
@@ -30,7 +31,7 @@
         <td><%=l valor.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.Editar")),
-                      edit_valor_path(valor), :class => 'btn btn-mini btn-info' %>
+                      edit_valor_path(valor), :class => 'btn btn-mini btn-inverse' %>
           <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
                       valor_path(valor),
                       :method => :delete,
