@@ -1,8 +1,11 @@
-<center><%= simple_form_for @tamano, :html => { :class => 'form-horizontal' } do |f| %></center>
-  <%= f.input :Sigla %>
+<%= simple_form_for(@tamano, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :descripcion, :label => "Descripcion",  :required => true %>
+
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-success' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
-                tamanos_path, :class => 'btn btn-inverse' %>
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', tamanos_path, :class => 'btn btn-inverse' %>
   </div>
 <% end %>
+
+

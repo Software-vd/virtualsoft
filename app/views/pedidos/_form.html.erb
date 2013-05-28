@@ -1,13 +1,14 @@
-<center><%= simple_form_for @pedido, :html => { :class => 'form-horizontal' } do |f| %></center>
-  <%= f.input :Fecha %>
-  <%= f.input :Numero_pedido %>
-  <%= f.input :Cantidad %>
-  <%= f.input :producto_id %>
-  <%= f.input :cliente_id %>
-  <%= f.input :valor_id %>
+<%= simple_form_for([@cliente,@pedido], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :fecha, :label => "Fecha",  :required => true %>
+  <%= f.input :numero_pedido, :label => "Numero_pedido",  :required => true %>
+  <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
+  <%= f.input :producto_id, :label => "producto_id",  :required => true %>
+  <%= f.input :valor_id, :label => "valor_id",  :required => true %>
+
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-success' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
-                pedidos_path, :class => 'btn btn-inverse' %>
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', cliente_pedidos_path(@cliente), :class => 'btn btn-inverse' %>
   </div>
 <% end %>
+

@@ -1,0 +1,12 @@
+<tr id=<%= "tipo_#{tipo.id}" %>>
+  <td><%= link_to tipo.id, edit_tipo_path(tipo), :remote => true %></td>
+  <td><%= tipo.Descripcion %></td>
+  <td>
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), tipo, :remote => true, :class => 'btn btn-mini btn-success' %>
+    <%= link_to image_tag('editar.gif', :title => "editar"), edit_tipo_path(tipo), :remote => true,
+        :class => 'btn btn-mini btn-info' %>
+    <%= link_to image_tag('eliminar.gif', :title => "eliminar"), tipo, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

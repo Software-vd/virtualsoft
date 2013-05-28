@@ -1,7 +1,7 @@
 class CreateTipodocs < ActiveRecord::Migration
   def change
     create_table :tipodocs do |t|
-      t.string :Sigla
+      t.string :sigla
       t.integer :cliente_id
 
       t.timestamps

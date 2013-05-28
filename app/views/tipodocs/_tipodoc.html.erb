@@ -1,0 +1,12 @@
+<tr id=<%= "tipodoc_#{tipodoc.id}" %>>
+  <td><%= link_to tipodoc.id, edit_tipodoc_path(tipodoc), :remote => true %></td>
+  <td><%= tipodoc.sigla %></td>
+  <td>
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), tipodoc, :remote => true, :class => 'btn btn-mini btn-success' %>
+    <%= link_to image_tag('editar.gif', :title => "editar"), edit_tipodoc_path(tipodoc), :remote => true,
+        :class => 'btn btn-mini btn-info' %>
+    <%= link_to image_tag('eliminar.gif', :title => "eliminar"), tipodoc, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

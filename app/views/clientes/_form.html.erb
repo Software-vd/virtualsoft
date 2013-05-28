@@ -1,13 +1,16 @@
-<center><%= simple_form_for @cliente, :html => { :class => 'form-horizontal' } do |f| %></center>
-  <%= f.input :tipodoc_id %>
-  <%= f.input :Numero_documento %>
-  <%= f.input :Nombres %>
-  <%= f.input :Apellidos %>
-  <%= f.input :Telefono %>
-  <%= f.input :Celular %>
+<%= simple_form_for(@cliente, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.label :tipodoc_id %>
+  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :sigla, prompt: "Tipodoc"  %>
+  
+  <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
+  <%= f.input :nombres, :label => "Nombres",  :required => true %>
+  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
+  <%= f.input :telefono, :label => "Telefono",  :required => true %>
+  <%= f.input :celular, :label => "Celular",  :required => true %>
+
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn btn-success' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
-                clientes_path, :class => 'btn btn-inverse' %>
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', clientes_path, :class => 'btn btn-inverse' %>
   </div>
 <% end %>

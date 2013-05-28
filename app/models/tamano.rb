@@ -1,3 +1,3 @@
 class Tamano < ActiveRecord::Base
-  attr_accessible :Sigla
+  attr_accessible :descripcion
 end

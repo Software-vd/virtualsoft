@@ -1,3 +1,5 @@
 class Tipodoc < ActiveRecord::Base
-  attr_accessible :Sigla, :cliente_id
+  attr_accessible :sigla, :cliente_id
+
+  belongs_to :cliente
 end

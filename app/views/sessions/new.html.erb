@@ -1,0 +1,24 @@
+<br>
+<br>
+<center><img src= "http://us.cdn4.123rf.com/168nwm/olivier26/olivier261103/olivier26110300035/9152030-candado-digital-con-un-nombre-de-usuario-y-contrasena-ademas-de-inicio-de-sesion-boton-sobre-un-fond.jpg"></center>
+<br>
+<br>
+<br>
+<br>
+<center>
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :usuario %>
+    <%= text_field_tag :username, params[:username] %>
+  </div>
+  <div class="field">
+    <%= label_tag :contraseña %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="field">
+    <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+    <%= label_tag :recordarme %>
+  </div>
+  <div class="actions"><%= submit_tag "Iniciar sesion" %></div>
+<% end %>
+</center>

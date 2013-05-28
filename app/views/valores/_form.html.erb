@@ -1,9 +1,12 @@
-<center><%= simple_form_for @valor, :html => { :class => 'form-horizontal' } do |f| %></center>
-  <%= f.input :valor_unitario %>
-  <%= f.input :valor_total %>
+<%= simple_form_for(@valor, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :valor_unitario, :label => "Valor_unitario",  :required => true %>
+  <%= f.input :valor_total, :label => "Valor_total",  :required => true %>
+
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-success' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.Cancelar")),
-                valores_path, :class => 'btn btn-inverse' %>
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', valores_path, :class => 'btn btn-inverse' %>
   </div>
 <% end %>
+
+

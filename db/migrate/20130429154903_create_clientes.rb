@@ -2,11 +2,11 @@ class CreateClientes < ActiveRecord::Migration
   def change
     create_table :clientes do |t|
       t.integer :tipodoc_id
-      t.string :Numero_documento
-      t.string :Nombres
-      t.string :Apellidos
-      t.string :Telefono
-      t.string :Celular
+      t.string :numero_documento
+      t.string :nombres
+      t.string :apellidos
+      t.string :telefono
+      t.string :celular
 
       t.timestamps
     end

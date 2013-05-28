@@ -24,6 +24,10 @@ gem 'jquery-rails'
 gem 'less-rails'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+gem 'lazybox'
+gem 'will_paginate'
+gem 'sorcery'
+gem 'bcrypt-ruby', :require => "bcrypt"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

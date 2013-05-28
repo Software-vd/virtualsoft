@@ -28,6 +28,8 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'hint', 'hints'
   inflect.irregular 'action', 'actions'
   inflect.irregular 'tipodoc', 'tipodocs'
+  inflect.irregular 'user', 'users'
+  inflect.irregular 'session', 'sessions'
 end
 
 

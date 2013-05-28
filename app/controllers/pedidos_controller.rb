@@ -1,83 +1,49 @@
 class PedidosController < ApplicationController
-  # GET /pedidos
-  # GET /pedidos.json
+  before_filter :require_login
+  before_filter :relacion
   def index
-    @pedidos = Pedido.all
-
+    #para rails 3.2.9 hasta 3.2.12(última versión a abril-2013)
+    @pedidos = @cliente.pedidos.search(params[:search]).page(params[:page]).per_page(2)
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @pedidos }
+      format.xml { render :xml => @pedidos }
     end
   end
 
-  # GET /pedidos/1
-  # GET /pedidos/1.json
+
   def show
-    @pedido = Pedido.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @pedido }
-    end
+      
   end
 
-  # GET /pedidos/new
-  # GET /pedidos/new.json
   def new
-    @pedido = Pedido.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @pedido }
-    end
+      @pedido = Pedido.new
   end
 
-  # GET /pedidos/1/edit
   def edit
-    @pedido = Pedido.find(params[:id])
+      
   end
 
-  # POST /pedidos
-  # POST /pedidos.json
   def create
-    @pedido = Pedido.new(params[:pedido])
-
-    respond_to do |format|
-      if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully created.' }
-        format.json { render json: @pedido, status: :created, location: @pedido }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @pedido.errors, status: :unprocessable_entity }
-      end
-    end
+      @pedido = Pedido.new(params[:pedido])
+      @pedido.cliente_id = @cliente.id
+      render :action => :new unless @pedido.save
   end
 
-  # PUT /pedidos/1
-  # PUT /pedidos/1.json
   def update
-    @pedido = Pedido.find(params[:id])
-
-    respond_to do |format|
-      if @pedido.update_attributes(params[:pedido])
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @pedido.errors, status: :unprocessable_entity }
-      end
-    end
+      
+      render :action => :edit unless @cliente.update_attributes(params[:pedido])
   end
 
-  # DELETE /pedidos/1
-  # DELETE /pedidos/1.json
   def destroy
-    @pedido = Pedido.find(params[:id])
-    @pedido.destroy
-
-    respond_to do |format|
-      format.html { redirect_to pedidos_url }
-      format.json { head :no_content }
-    end
+      
+      @pedido.destroy
   end
+  
+  private
+
+  def relacion
+    @cliente = Cliente.find(params[:cliente_id])
+    @pedido = Pedido.find(params[:id]) if params[:id]
+  end
+  
 end

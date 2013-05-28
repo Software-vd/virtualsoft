@@ -12,38 +12,21 @@
 <br>
 <br>
 <br>
-<table class="table table-striped">
+<table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:valor_unitario) %></th>
-      <th><%= model_class.human_attribute_name(:valor_total) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>id</th>
+      <th>Valor unitario</th>
+      <th>Valor total</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <% @valores.each do |valor| %>
-      <tr>
-        <td><%= link_to valor.id, valor_path(valor) %></td>
-        <td><%= valor.valor_unitario %></td>
-        <td><%= valor.valor_total %></td>
-        <td><%=l valor.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.Editar")),
-                      edit_valor_path(valor), :class => 'btn btn-mini btn-inverse' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.Eliminar")),
-                      valor_path(valor),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Esta seguro?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
+     <%= render @valores %>
   </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo Valor', new_valor_path, :class => 'btn btn-success', :remote => true %></td>
+    </tr>
+  </tfoot>
 </table>
-<center>
-<%= link_to t('.new', :default => t("helpers.links.Nuevo")),
-            new_valor_path,
-            :class => 'btn btn-success' %>
-</center>

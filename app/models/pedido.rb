@@ -1,3 +1,10 @@
 class Pedido < ActiveRecord::Base
-  attr_accessible :Cantidad, :Fecha, :Numero_pedido, :cliente_id, :producto_id, :valor_id
+  attr_accessible :cantidad, :fecha, :numero_pedido, :cliente_id, :producto_id, :valor_id
+  
+  def self.search(search)
+    where('cantidad like ?', "%#{search}%")
+  end
+
+  belongs_to :cliente
+  
 end

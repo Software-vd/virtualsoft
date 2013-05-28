@@ -1,0 +1,12 @@
+<tr id=<%= "tamano_#{tamano.id}" %>>
+  <td><%= link_to tamano.id, edit_tamano_path(tamano), :remote => true %></td>
+  <td><%= tamano.descripcion %></td>
+  <td>
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), tamano, :remote => true, :class => 'btn btn-mini btn-success' %>
+    <%= link_to image_tag('editar.gif', :title => "editar"), edit_tamano_path(tamano), :remote => true,
+        :class => 'btn btn-mini btn-info' %>
+    <%= link_to image_tag('eliminar.gif', :title => "eliminar"), tamano, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>
