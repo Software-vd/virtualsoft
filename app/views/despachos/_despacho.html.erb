@@ -1,0 +1,15 @@
+<tr id=<%= "despacho_#{despacho.id}" %>>
+  <td><%= link_to despacho.id, edit_despacho_path(despacho), :remote => true %></td>
+  <td><%= despacho.fecha %></td>
+  <td><%= despacho.encargado %></td>
+  <td><%= despacho.pagos_id %></td>
+  <td><%= despacho.estado_entrega_id %></td>
+  <td>
+    <%= link_to 'Mostrar', despacho, :remote => true, :class => 'btn btn-mini btn-success' %>
+    <%= link_to 'Editar', edit_despacho_path(despacho), :remote => true,
+        :class => 'btn btn-mini btn-info' %>
+    <%= link_to 'Eliminar', despacho, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

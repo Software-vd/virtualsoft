@@ -1,0 +1,16 @@
+<%= simple_form_for(@cotizacion, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :fecha, :label => "Fecha",  :required => true %>
+  <%= f.input :numero_cotizacion, :label => "Numero_cotizacion",  :required => true %>
+  <%= f.input :tipodoc_id, :label => "Tipodoc_id",  :required => true %>
+  <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
+  <%= f.input :nombres, :label => "Nombres",  :required => true %>
+  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
+  <%= f.input :producto_id, :label => "producto_id",  :required => true %>
+  <%= f.input :valor_id, :label => "valor_id",  :required => true %>
+
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', cotizaciones_path, :class => 'btn btn-inverse' %>
+  </div>
+<% end %>

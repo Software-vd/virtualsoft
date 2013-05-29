@@ -24,6 +24,57 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "cotizaciones", :force => true do |t|
+    t.date     "fecha"
+    t.string   "numero_cotizacion"
+    t.integer  "tipodoc_id"
+    t.string   "numero_documento"
+    t.string   "nombres"
+    t.string   "apellidos"
+    t.integer  "producto_id"
+    t.integer  "valor_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "despachos", :force => true do |t|
+    t.date     "fecha"
+    t.string   "encargado"
+    t.integer  "pagos_id"
+    t.integer  "estado_entrega_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "estadoentregas", :force => true do |t|
+    t.string   "descripcion"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "facturas", :force => true do |t|
+    t.date     "fecha"
+    t.string   "numero_factura"
+    t.string   "nombres"
+    t.string   "apellido"
+    t.string   "cantidad"
+    t.string   "productos"
+    t.integer  "cotizacion_id"
+    t.integer  "valor_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "pagos", :force => true do |t|
+    t.date     "fecha"
+    t.string   "nombres"
+    t.string   "apellidos"
+    t.integer  "factura_id"
+    t.integer  "valor_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "pedidos", :force => true do |t|
     t.date     "fecha"
     t.string   "numero_pedido"
@@ -33,6 +84,15 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.integer  "valor_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "productos", :force => true do |t|
+    t.string   "codigo"
+    t.integer  "tamano_id"
+    t.integer  "tipo_id"
+    t.integer  "valor_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tamanos", :force => true do |t|

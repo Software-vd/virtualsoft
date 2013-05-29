@@ -1,0 +1,12 @@
+<%- model_class = Producto -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='producto'>
+  <p><%= @producto.id %></p>
+  <p><%= @producto.codigo %></p>
+  <p><%= @producto.tamano_id %></p>
+  <p><%= @producto.tipo_id %></p>
+  <p><%= @producto.valor_id %></p>
+</div>

@@ -1,0 +1,13 @@
+<%= simple_form_for(@pago, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :fecha, :label => "Fecha",  :required => true %>
+  <%= f.input :nombres, :label => "Nombres",  :required => true %>
+  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
+  <%= f.input :factura_id, :label => "Factura_id",  :required => true %>
+  <%= f.input :valor_id, :label => "Valor_id",  :required => true %>
+
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', pagos_path, :class => 'btn btn-inverse' %>
+  </div>
+<% end %>

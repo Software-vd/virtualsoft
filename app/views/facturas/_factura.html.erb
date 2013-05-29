@@ -1,0 +1,19 @@
+<tr id=<%= "factura_#{factura.id}" %>>
+  <td><%= link_to factura.id, edit_factura_path(factura), :remote => true %></td>
+   <td><%= factura.fecha %></td>
+   <td><%= factura.numero_factura %></td>
+   <td><%= factura.nombres %></td>
+   <td><%= factura.apellido %></td>
+   <td><%= factura.cantidad %></td>
+   <td><%= factura.productos %></td>
+   <td><%= factura.cotizacion_id %></td>
+   <td><%= factura.valor_id %></td>
+   <td>
+    <%= link_to 'Mostrar', factura, :remote => true, :class => 'btn btn-mini btn-success' %>
+    <%= link_to 'Editar', edit_factura_path(factura), :remote => true,
+        :class => 'btn btn-mini btn-info' %>
+    <%= link_to 'Eliminar', factura, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

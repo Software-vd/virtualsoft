@@ -1,0 +1,15 @@
+<%- model_class = Factura -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='factura'>
+  <p><%= @factura.fecha %></p>
+  <p><%= @factura.numero_factura %></p>
+  <p><%= @factura.nombres %></p>
+  <p><%= @factura.apellido %></p>
+  <p><%= @factura.cantidad %></p>
+  <p><%= @factura.productos %></p>
+  <p><%= @factura.cotizacion_id %></p>
+  <p><%= @factura.valor_id %></p>
+</div>

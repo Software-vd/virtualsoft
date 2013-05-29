@@ -1,0 +1,12 @@
+<%- model_class = Pago -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='pago'>
+  <p><%= @pago.fecha %></p>
+  <p><%= @pago.nombres%></p>
+  <p><%= @pago.apellidos %></p>
+  <p><%= @pago.factura_id %></p>
+  <p><%= @pago.valor_id %></p>
+</div>

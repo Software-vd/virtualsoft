@@ -1,0 +1,12 @@
+<%= simple_form_for(@producto, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.input :codigo, :label => "Codigo",  :required => true %>
+  <%= f.input :tamano_id, :label => "Tamaño_id",  :required => true %>
+  <%= f.input :tipo_id, :label => "Tipo_id",  :required => true %>
+  <%= f.input :valor_id, :label => "Valor_id",  :required => true %>
+
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', productos_path, :class => 'btn btn-inverse' %>
+  </div>
+<% end %>

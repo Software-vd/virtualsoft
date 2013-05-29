@@ -1,0 +1,14 @@
+<%= simple_form_for(@despacho, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+<%= f.error_notification %>
+
+  <%= f.input :fecha, :label => "Fecha",  :required => true %>
+  <%= f.input :encargado, :label => "Encargado",  :required => true %>
+  <%= f.input :pagos_id, :label => "pagos_id",  :required => true %>
+  <%= f.input :estado_entrega_id, :label => "estado_entrega_id",  :required => true %>
+
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-info' %>
+    <%= link_to 'Atras', despachos_path, :class => 'btn btn-inverse' %>
+  </div>
+<% end %>

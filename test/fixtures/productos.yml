@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Codigo: MyString
+  tamano_id: 1
+  tipo_id: 1
+  valor_id: 1
+
+two:
+  Codigo: MyString
+  tamano_id: 1
+  tipo_id: 1
+  valor_id: 1

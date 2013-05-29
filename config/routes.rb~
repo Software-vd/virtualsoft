@@ -36,12 +36,6 @@ Softmade::Application.routes.draw do
   resources :facturas
 
 
-  resources :pagos
-
-  
-  resources :productos
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

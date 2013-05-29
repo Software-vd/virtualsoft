@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Fecha: 2013-04-29
+  Numero_factura: MyString
+  Nombres: MyString
+  Apellido: MyString
+  Cantidad: MyString
+  Productos: MyString
+  cotizacion_id: 1
+  valor_id: 1
+
+two:
+  Fecha: 2013-04-29
+  Numero_factura: MyString
+  Nombres: MyString
+  Apellido: MyString
+  Cantidad: MyString
+  Productos: MyString
+  cotizacion_id: 1
+  valor_id: 1

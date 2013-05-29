@@ -1,0 +1,12 @@
+<%- model_class = Despacho -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='despacho'>
+  <p><%= @despacho.fecha %></p>
+  <p><%= @despacho.encargado %></p>
+  <p><%= @despacho.pagos_id %></p>
+  <p><%= @despacho.estado_entrega_id %></p>
+</div>
+
