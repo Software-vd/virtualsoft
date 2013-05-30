@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout 'registro'
   def index
   end
 

@@ -1,5 +1,5 @@
 class EstadoentregasController < ApplicationController
-
+ before_filter :require_login
   def index
     @estadoentregas = Estadoentrega.all
     respond_to do |format|

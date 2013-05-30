@@ -1,5 +1,5 @@
 class DespachosController < ApplicationController
-
+ before_filter :require_login
   def index
     @despachos = Despacho.all
     respond_to do |format|

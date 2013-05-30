@@ -1,5 +1,5 @@
 class ProductosController < ApplicationController
-
+before_filter :require_login
   def index
     @productos = Producto.all
     respond_to do |format|

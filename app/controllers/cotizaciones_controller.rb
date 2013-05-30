@@ -1,5 +1,5 @@
 class CotizacionesController < ApplicationController
-
+ before_filter :require_login
   def index
     #para rails 3.2.9 hasta 3.2.12(última versión a abril-2013)
     @cotizaciones = Cotizacion.search(params[:search]).page(params[:page]).per_page(5)
