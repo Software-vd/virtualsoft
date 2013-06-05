@@ -1,5 +1,8 @@
 class ProductosController < ApplicationController
 before_filter :require_login
+
+layout 'fondo'
+
   def index
     @productos = Producto.all
     respond_to do |format|

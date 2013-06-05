@@ -4,4 +4,12 @@ class Cotizacion < ActiveRecord::Base
   def self.search(search)
    where('nombres like ?', "%#{search}%")
   end
+
+has_many :tipodocs
+
+has_many :productos
+
+has_many :valores
+
+belongs_to :factura
 end

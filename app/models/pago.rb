@@ -4,4 +4,10 @@ class Pago < ActiveRecord::Base
   def self.search(search)
    where('nombres like ?', "%#{search}%")
   end
+
+  belongs_to :despacho
+
+  has_many :facturas
+
+  has_many :valores
 end

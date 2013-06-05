@@ -1,5 +1,8 @@
 class EstadoentregasController < ApplicationController
  before_filter :require_login
+
+ layout 'fondo'
+ 
   def index
     @estadoentregas = Estadoentrega.all
     respond_to do |format|

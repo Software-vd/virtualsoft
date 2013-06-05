@@ -128,8 +128,8 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
 
   create_table "valores", :force => true do |t|
-    t.float    "valor_unitario"
-    t.float    "valor_total"
+    t.string   "valor_unitario"
+    t.string   "valor_total"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

@@ -2,7 +2,8 @@
 
   <%= f.label :tipodoc_id %>
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :sigla, prompt: "Tipodoc"  %>
-  
+  <br>
+  <br>
   <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>

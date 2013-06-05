@@ -2,12 +2,19 @@
 
   <%= f.input :fecha, :label => "Fecha",  :required => true %>
   <%= f.input :numero_cotizacion, :label => "Numero_cotizacion",  :required => true %>
-  <%= f.input :tipodoc_id, :label => "Tipodoc_id",  :required => true %>
+  <%= f.label :tipodoc_id %>
+  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :sigla, prompt: "Tipodoc"  %>
+  <br>
+  <br>
   <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
-  <%= f.input :producto_id, :label => "producto_id",  :required => true %>
-  <%= f.input :valor_id, :label => "valor_id",  :required => true %>
+  <%= f.label :producto_id %>
+  <%= f.collection_select :producto_id, Producto.all, :id, :codigo, prompt: "Producto"  %>
+  <br>
+  <br>
+  <%= f.label :valor_id %>
+  <%= f.collection_select :valor_id, Valor.all, :id, :valor_unitario, prompt: "Valor"  %>
 
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>

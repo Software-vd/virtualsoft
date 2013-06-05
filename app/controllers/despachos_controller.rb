@@ -1,5 +1,8 @@
 class DespachosController < ApplicationController
  before_filter :require_login
+
+ layout 'fondo'
+ 
   def index
     @despachos = Despacho.all
     respond_to do |format|

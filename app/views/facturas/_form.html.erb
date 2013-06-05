@@ -6,8 +6,12 @@
   <%= f.input :apellido, :label => "Apellido",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
   <%= f.input :productos, :label => "Productos",  :required => true %>
-  <%= f.input :cotizacion_id, :label => "cotizacion_id",  :required => true %>
-   <%= f.input :valor_id, :label => "valor_id",  :required => true %>
+  <%= f.label :cotizacion_id %>
+  <%= f.collection_select :cotizacion_id, Cotizacion.all, :id, :numero_cotizacion, prompt: "Cotizacion"  %>
+  <br>
+  <br>
+  <%= f.label :valor_id %>
+  <%= f.collection_select :valor_id, Valor.all, :id, :valor_unitario, prompt: "Valor"  %>
 
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>

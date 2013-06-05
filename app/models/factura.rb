@@ -4,4 +4,8 @@ class Factura < ActiveRecord::Base
   def self.search(search)
    where('nombres like ?', "%#{search}%")
   end
+
+  has_many :cotizaciones
+
+  belongs_to :pago
 end

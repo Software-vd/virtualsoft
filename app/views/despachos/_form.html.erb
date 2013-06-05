@@ -4,8 +4,13 @@
 
   <%= f.input :fecha, :label => "Fecha",  :required => true %>
   <%= f.input :encargado, :label => "Encargado",  :required => true %>
-  <%= f.input :pagos_id, :label => "pagos_id",  :required => true %>
-  <%= f.input :estado_entrega_id, :label => "estado_entrega_id",  :required => true %>
+  <%= f.label :pagos_id %>
+  <%= f.collection_select :pagos_id, Pago.all, :id, :nombres, prompt: "Pago"  %>
+  <br>
+  <br>
+  <%= f.label :estado_entrega_id %>
+  <%= f.collection_select :estado_entrega_id, Estadoentrega.all, :id, :descripcion, prompt: "Estadoentrega"  %>
+  
 
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>
