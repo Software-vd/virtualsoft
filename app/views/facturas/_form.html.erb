@@ -1,7 +1,6 @@
 <%= simple_form_for(@factura, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
   <%= f.input :fecha, :label => "Fecha",  :required => true %>
-  <%= f.input :numero_factura, :label => "Numero_factura",  :required => true %>
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellido, :label => "Apellido",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>

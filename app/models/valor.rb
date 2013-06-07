@@ -8,4 +8,6 @@ class Valor < ActiveRecord::Base
   belongs_to :pago
 
   belongs_to :producto
+
+  has_many :pedidos
 end

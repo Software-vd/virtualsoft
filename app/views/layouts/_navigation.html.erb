@@ -6,39 +6,40 @@
 </li>
 </li>
 <li>
-<%= link_to('Clientes', clientes_path) %>
-</li>
-<!-- else %> -->
-<!-- end %> -->
-<!-- if user_signed_in? %> -->
-<li>
-<%= link_to('Valores', valores_path) %>
-</li>
-<!-- else %> -->
-<li>
 <%= link_to('Tamaños', tamanos_path) %>
 </li>
 <li>
 <%= link_to('Tipos', tipos_path) %>
 </li>
 <li>
-<%= link_to('Cotizaciones', cotizaciones_path) %>
+<%= link_to('Valores', valores_path) %>
 </li>
 <li>
-<%= link_to('Despachos', despachos_path) %>
+<%= link_to('Productos', productos_path) %>
 </li>
 <li>
-<%= link_to('Estado_entregas', estadoentregas_path) %>
+<%= link_to('Clientes', clientes_path) %>
 </li>
+<!-- else %> -->
+<!-- end %> -->
+<!-- if user_signed_in? %> -->
 <li>
 <%= link_to('Facturas', facturas_path) %>
+</li>
+<li>
+<%= link_to('Cotizaciones', cotizaciones_path) %>
 </li>
 <li>
 <%= link_to('Pagos', pagos_path) %>
 </li>
 <li>
-<%= link_to('Productos', productos_path) %>
+<%= link_to('Despachos', despachos_path) %>
 </li>
+<!-- else %> -->
+<li>
+<%= link_to('Estado entregas', estadoentregas_path) %>
+</li>
+
 <li>
 <%= link_to('', "") %>
 </li>

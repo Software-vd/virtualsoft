@@ -1,7 +1,6 @@
 <%= simple_form_for(@cotizacion, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
   <%= f.input :fecha, :label => "Fecha",  :required => true %>
-  <%= f.input :numero_cotizacion, :label => "Numero_cotizacion",  :required => true %>
   <%= f.label :tipodoc_id %>
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :sigla, prompt: "Tipodoc"  %>
   <br>

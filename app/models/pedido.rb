@@ -6,5 +6,9 @@ class Pedido < ActiveRecord::Base
   end
 
   belongs_to :cliente
+
+  belongs_to :producto
+
+  belongs_to :valor
   
 end

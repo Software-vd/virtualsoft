@@ -1,10 +1,17 @@
 <%= simple_form_for([@cliente,@pedido], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
   <%= f.input :fecha, :label => "Fecha",  :required => true %>
-  <%= f.input :numero_pedido, :label => "Numero_pedido",  :required => true %>
+  <%= f.label :producto_id %>
+  <%= f.collection_select :producto_id, Producto.all, :id, :codigo, prompt: "Producto"  %>
+  <br>
+  <br>
+  <%= f.label :valor_id %>
+  <%= f.collection_select :valor_id, Valor.all, :id, :valor_unitario, prompt: "Valor"  %>
+  <br>
+  <br>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
-  <%= f.input :producto_id, :label => "producto_id",  :required => true %>
-  <%= f.input :valor_id, :label => "valor_id",  :required => true %>
+  
+  
 
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>

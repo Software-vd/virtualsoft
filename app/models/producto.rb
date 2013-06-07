@@ -6,4 +6,6 @@ class Producto < ActiveRecord::Base
   has_many :tamanos
 
   has_many :tipos
+
+  has_many :pedidos
 end
