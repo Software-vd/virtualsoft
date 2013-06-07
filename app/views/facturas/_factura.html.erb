@@ -1,7 +1,6 @@
 <tr id=<%= "factura_#{factura.id}" %>>
   <td><%= link_to factura.id, edit_factura_path(factura), :remote => true %></td>
    <td><%= factura.fecha %></td>
-   <td><%= factura.numero_factura %></td>
    <td><%= factura.nombres %></td>
    <td><%= factura.apellido %></td>
    <td><%= factura.cantidad %></td>

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
+//= require jquery-ui
 //= require_tree .
 //= require lazybox
 
@@ -26,3 +27,4 @@ $(document).ready(function() {
   $.rails.allowAction = $.lazybox.confirm;
  
 });
+

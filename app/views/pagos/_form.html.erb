@@ -1,6 +1,8 @@
+<%= javascript_include_tag "pagos.js" %>
+
 <%= simple_form_for(@pago, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
-  <%= f.input :fecha, :label => "Fecha",  :required => true %>
+    <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
   <%= f.label :factura_id %>

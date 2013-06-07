@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "cotizaciones", :force => true do |t|
-    t.date     "fecha"
+    t.string   "fecha"
     t.string   "numero_cotizacion"
     t.integer  "tipodoc_id"
     t.string   "numero_documento"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "despachos", :force => true do |t|
-    t.date     "fecha"
+    t.string   "fecha"
     t.string   "encargado"
     t.integer  "pagos_id"
     t.integer  "estado_entrega_id"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "facturas", :force => true do |t|
-    t.date     "fecha"
+    t.string   "fecha"
     t.string   "numero_factura"
     t.string   "nombres"
     t.string   "apellido"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "pagos", :force => true do |t|
-    t.date     "fecha"
+    t.string   "fecha"
     t.string   "nombres"
     t.string   "apellidos"
     t.integer  "factura_id"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "pedidos", :force => true do |t|
-    t.date     "fecha"
+    t.string   "fecha"
     t.string   "numero_pedido"
     t.string   "cantidad"
     t.integer  "producto_id"

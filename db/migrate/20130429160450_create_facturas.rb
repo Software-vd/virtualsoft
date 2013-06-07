@@ -1,7 +1,7 @@
 class CreateFacturas < ActiveRecord::Migration
   def change
     create_table :facturas do |t|
-      t.date :fecha
+      t.string :fecha
       t.string :numero_factura
       t.string :nombres
       t.string :apellido

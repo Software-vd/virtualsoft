@@ -1,7 +1,7 @@
 class CreateCotizaciones < ActiveRecord::Migration
   def change
     create_table :cotizaciones do |t|
-      t.date :fecha
+      t.string :fecha
       t.string :numero_cotizacion
       t.integer :tipodoc_id
       t.string :numero_documento
