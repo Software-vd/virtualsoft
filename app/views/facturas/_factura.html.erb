@@ -14,5 +14,6 @@
     <%= link_to 'Eliminar', factura, 
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    <%= link_to 'Pdf', factura_path(factura, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
   </td>
 </tr>

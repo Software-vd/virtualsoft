@@ -40,7 +40,18 @@
 </li>
 <!-- else %> -->
 <li>
-<%= link_to('', "") %>
+<%= link_to "Salir", logout_path %>
 </li>
 <!-- end %> -->
 </ul>
+<div id="container">
+    <div class="user_nav">
+      <% if current_user %>
+      <font color="white">
+        Sesion iniciada en <%= current_user.email %>
+        <font color="black">
+      <% else %>
+        <%= link_to "Registrarse", signup_path %> o
+        <%= link_to "Iniciar sesion", login_path %>.
+      <% end %>
+    </div>

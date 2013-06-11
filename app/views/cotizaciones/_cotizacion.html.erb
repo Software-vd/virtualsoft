@@ -14,5 +14,6 @@
     <%= link_to 'Eliminar', cotizacion, 
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    <%= link_to 'Pdf', cotizacion_path(cotizacion, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
   </td>
 </tr>
