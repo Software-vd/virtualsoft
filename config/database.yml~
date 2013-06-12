@@ -18,7 +18,7 @@ development:
   database: softmade_development
   pool: 5
   username: postgres
-  password: postgres
+  password: 4ds12012
   host: localhost
   port: 5433
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -44,7 +44,7 @@ test:
   database: softmade_test
   pool: 5
   username: postgres
-  password: postgres
+  password: 4ds12012
   host: localhost
   port: 5433
 
@@ -54,6 +54,6 @@ production:
   database: softmade_production
   pool: 5
   username: postgres
-  password: postgres
+  password: 4ds12012
   host: localhost
   port: 5433
