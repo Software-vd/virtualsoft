@@ -20,7 +20,7 @@ development:
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: 5433
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
@@ -46,7 +46,7 @@ test:
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: 5433
 
 production:
   adapter: postgresql
@@ -56,4 +56,4 @@ production:
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: 5433

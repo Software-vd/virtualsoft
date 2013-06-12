@@ -17,7 +17,7 @@ class FacturasController < ApplicationController
       pdf = FacturaPdf.new(@factura, view_context)
       send_data pdf.render, filename:
       "factura_#{@factura.id}.pdf",
-      type: "aplication/pdf", :disposition => "inline"
+      type: "application/pdf", :disposition => "inline"
 end
 
   def new
