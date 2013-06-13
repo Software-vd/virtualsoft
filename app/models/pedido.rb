@@ -4,6 +4,18 @@ class Pedido < ActiveRecord::Base
   def self.search(search)
     where('cantidad like ?', "%#{search}%")
   end
+  
+  validates :cantidad, :presence => true,
+  :length => { :maximum => 3 }
+
+  validates :cliente_id, :presence => true,
+  :length => { :maximum => 80 }
+
+  validates :producto_id, :presence => true,
+  :length => { :maximum => 80 }
+
+  validates :valor_id, :presence => true,
+  :length => { :maximum => 20 }
 
   belongs_to :cliente
 
