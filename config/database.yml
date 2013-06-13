@@ -18,9 +18,9 @@ development:
   database: softmade_development
   pool: 5
   username: postgres
-  password: 4ds12012
+  password: postgres
   host: localhost
-  port: 5432
+  port: 5433
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
@@ -44,9 +44,9 @@ test:
   database: softmade_test
   pool: 5
   username: postgres
-  password: 4ds12012
+  password: postgres
   host: localhost
-  port: 5432
+  port: 5433
 
 production:
   adapter: postgresql
@@ -54,6 +54,6 @@ production:
   database: softmade_production
   pool: 5
   username: postgres
-  password: 4ds12012
+  password: postgres
   host: localhost
-  port: 5432
+  port: 5433
