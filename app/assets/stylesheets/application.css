@@ -19,13 +19,6 @@
   background: transparent !important;
 }
 
-#lazybox_close.img {
-  background: url('close.png') no-repeat;
-  width: 35px;
-  height: 25px;
-  top: -4px;
-  right: -17px;
-}
 
 #lazybox.sticker {
   -webkit-border-bottom-left-radius: 20px 500px;

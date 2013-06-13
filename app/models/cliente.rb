@@ -5,24 +5,13 @@ class Cliente < ActiveRecord::Base
     where('nombres like ?', "%#{search}%")
   end
   
-  validates :numero_documento, :presence => true,
-  :length => { :minimum => 6, :maximum => 15 },
-  :numericality => true
-
-  validates :nombres, :apellidos, :presence => true,
-  :length => { :maximum => 80 }
-
-  validates :telefono, :presence => true,
-  :length => { :maximum => 7 }
-
-  validates :celular, :presence => true,
-  :length => { :maximum => 10 }
-
-  validates :tipodoc_id, :presence => true,
-  :length => { :maximum => 2 }
-
-
-
+  validates_uniqueness_of :tipodoc_id
+  validates_presence_of :numero_documento
+  validates_presence_of :nombres
+  validates_presence_of :apellidos
+  validates_presence_of :celular
+  validates_presence_of :telefono
+        
   has_many :tipodocs
 
   has_many :pedidos
