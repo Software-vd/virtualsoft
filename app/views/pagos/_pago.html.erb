@@ -4,7 +4,7 @@
   <td><%= pago.nombres %></td>
   <td><%= pago.apellidos %></td>
   <td><%= pago.factura_id %></td>
-  <td><%= pago.valor_id %></td>
+  <td><%= pago.valor %></td>
   <td>
     <%= link_to 'Mostrar', pago, :remote => true, :class => 'btn btn-mini btn-success' %>
     <%= link_to 'Editar', edit_pago_path(pago), :remote => true,

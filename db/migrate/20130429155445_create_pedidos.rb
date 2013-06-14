@@ -6,7 +6,7 @@ class CreatePedidos < ActiveRecord::Migration
       t.string :cantidad
       t.integer :producto_id
       t.integer :cliente_id
-      t.integer :valor_id
+      t.string :valor
 
       t.timestamps
     end

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "nombres"
     t.string   "apellidos"
     t.integer  "producto_id"
-    t.integer  "valor_id"
+    t.string   "valor"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "cantidad"
     t.string   "producto_id"
     t.integer  "cotizacion_id"
-    t.integer  "valor_id"
+    t.string   "valor"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "nombres"
     t.string   "apellidos"
     t.integer  "factura_id"
-    t.integer  "valor_id"
+    t.string   "valor"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "cantidad"
     t.integer  "producto_id"
     t.integer  "cliente_id"
-    t.integer  "valor_id"
+    t.string   "valor"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "codigo"
     t.integer  "tamano_id"
     t.integer  "tipo_id"
-    t.integer  "valor_id"
+    t.string   "valor"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -103,7 +103,6 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
 
   create_table "tipodocs", :force => true do |t|
     t.string   "sigla"
-    t.integer  "cliente_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

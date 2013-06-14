@@ -1,5 +1,5 @@
 class Factura < ActiveRecord::Base
-  attr_accessible :apellido, :cantidad, :fecha, :nombres, :producto_id, :cotizacion_id, :valor_id
+  attr_accessible :apellido, :cantidad, :fecha, :nombres, :producto_id, :cotizacion_id, :valor
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")
@@ -17,7 +17,7 @@ class Factura < ActiveRecord::Base
   validates :cotizacion_id, :presence => true,
   :length => { :maximum => 10 }
 
-  validates :valor_id, :presence => true,
+  validates :valor, :presence => true,
   :length => { :maximum => 10 }
 
   has_many :cotizaciones

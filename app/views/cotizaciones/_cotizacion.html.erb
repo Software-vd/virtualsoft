@@ -6,7 +6,7 @@
   <td><%= cotizacion.nombres %></td>
   <td><%= cotizacion.apellidos %></td>
   <td><%= cotizacion.producto_id %></td>
-  <td><%= cotizacion.valor_id %></td>
+  <td><%= cotizacion.valor %></td>
   <td>
     <%= link_to 'Mostrar', cotizacion, :remote => true, :class => 'btn btn-mini btn-success' %>
     <%= link_to 'Editar', edit_cotizacion_path(cotizacion), :remote => true,

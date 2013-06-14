@@ -3,7 +3,7 @@
   <td><%= producto.codigo %></td>
   <td><%= producto.tamano_id %></td>
   <td><%= producto.tipo_id %></td>
-  <td><%= producto.valor_id %></td>
+  <td><%= producto.valor %></td>
   <td>
     <%= link_to 'Mostrar', producto, :remote => true, :class => 'btn btn-mini btn-success' %>
     <%= link_to 'Editar', edit_producto_path(producto), :remote => true,

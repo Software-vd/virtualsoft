@@ -8,7 +8,7 @@ class CreateFacturas < ActiveRecord::Migration
       t.string :cantidad
       t.string :producto_id
       t.integer :cotizacion_id
-      t.integer :valor_id
+      t.string :valor
 
       t.timestamps
     end

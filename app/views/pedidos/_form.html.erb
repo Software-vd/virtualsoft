@@ -7,8 +7,7 @@
   <%= f.collection_select :producto_id, Producto.all, :id, :codigo, prompt: "Producto"  %>
   <br>
   <br>
-  <%= f.label :valor_id %>
-  <%= f.collection_select :valor_id, Valor.all, :id, :valor_unitario, prompt: "Valor"  %>
+  <%= f.input :valor, :label => "Valor",  :required => true %>
   <br>
   <br>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>

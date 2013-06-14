@@ -1,5 +1,5 @@
 class Pago < ActiveRecord::Base
-  attr_accessible :apellidos, :fecha, :nombres, :factura_id, :valor_id
+  attr_accessible :apellidos, :fecha, :nombres, :factura_id, :valor
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")
@@ -11,12 +11,11 @@ class Pago < ActiveRecord::Base
   validates :factura_id, :presence => true, 
   :length => { :maximum => 80 }
 
-  validates :valor_id, :presence => true, 
+  validates :valor, :presence => true, 
   :length => { :maximum => 80 }
 
   belongs_to :despacho
 
   has_many :facturas
 
-  has_many :valores
 end

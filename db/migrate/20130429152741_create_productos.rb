@@ -4,7 +4,7 @@ class CreateProductos < ActiveRecord::Migration
       t.string :codigo
       t.integer :tamano_id
       t.integer :tipo_id
-      t.integer :valor_id
+      t.string :valor
 
       t.timestamps
     end

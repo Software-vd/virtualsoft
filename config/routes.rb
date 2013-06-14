@@ -13,9 +13,6 @@ Softmade::Application.routes.draw do
   resources :tamanos
 
 
-  resources :valores
-
-
   resources :clientes do
     resources :pedidos
   end

@@ -9,9 +9,7 @@
   <%= f.collection_select :factura_id, Factura.all, :id, :cantidad, prompt: "Factura"  %>
   <br>
   <br>
-  <%= f.label :valor_id %>
-  <%= f.collection_select :valor_id, Valor.all, :id, :valor_unitario, prompt: "Valor"  %>
-
+  <%= f.input :valor, :label => "Valor",  :required => true %>
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', pagos_path, :class => 'btn btn-inverse' %>

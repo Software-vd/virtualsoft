@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  valor_unitario: 1.5
-  valor_total: 1.5
-
-two:
-  valor_unitario: 1.5
-  valor_total: 1.5

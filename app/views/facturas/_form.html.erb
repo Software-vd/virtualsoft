@@ -14,9 +14,7 @@
   <%= f.collection_select :cotizacion_id, Cotizacion.all, :id, :fecha, prompt: "Cotizacion"  %>
   <br>
   <br>
-  <%= f.label :valor_id %>
-  <%= f.collection_select :valor_id, Valor.all, :id, :valor_unitario, prompt: "Valor"  %>
-
+  <%= f.input :valor, :label => "Valor",  :required => true %>
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', facturas_path, :class => 'btn btn-inverse' %>
