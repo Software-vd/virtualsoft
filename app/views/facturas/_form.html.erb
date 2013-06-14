@@ -6,7 +6,10 @@
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellido, :label => "Apellido",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
-  <%= f.input :productos, :label => "Productos",  :required => true %>
+  <%= f.label :producto_id %>
+  <%= f.collection_select :producto_id, Producto.all, :id, :tipo_id, prompt: "Producto"  %>
+  <br>
+  <br>
   <%= f.label :cotizacion_id %>
   <%= f.collection_select :cotizacion_id, Cotizacion.all, :id, :fecha, prompt: "Cotizacion"  %>
   <br>

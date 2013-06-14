@@ -5,9 +5,11 @@ class Cotizacion < ActiveRecord::Base
    where('nombres like ?', "%#{search}%")
   end
 
-  validates :nombres, :apellidos, :presence => true, 
+  validates :nombres, :presence => true, 
   :length => { :maximum => 80 }
 
+  validates :apellidos, :presence => true, 
+  :length => { :maximum => 80 }
 
   validates :numero_documento, :presence => true, 
   :length => { :minimum => 6, :maximum => 15 },

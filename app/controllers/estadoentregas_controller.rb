@@ -1,6 +1,6 @@
 class EstadoentregasController < ApplicationController
  before_filter :require_login
-
+ 
  layout 'fondo'
  
   def index

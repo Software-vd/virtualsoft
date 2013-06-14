@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "nombres"
     t.string   "apellido"
     t.string   "cantidad"
-    t.string   "productos"
+    t.string   "producto_id"
     t.integer  "cotizacion_id"
     t.integer  "valor_id"
     t.datetime "created_at",     :null => false

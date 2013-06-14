@@ -20,4 +20,6 @@ class Producto < ActiveRecord::Base
   has_many :tipos
 
   has_many :pedidos
+
+  has_many :facturas
 end
