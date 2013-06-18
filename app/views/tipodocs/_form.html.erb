@@ -1,7 +1,9 @@
 <%= simple_form_for(@tipodoc, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
-
-  <%= f.input :sigla, :label => "Sigla",  :required => true %>
-
+  <div class="span5">
+  <br>
+  <br>
+  <%= f.input :descripcion, :label => "Descripcion",  :required => true %>
+  </div>
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', tipodocs_path, :class => 'btn btn-inverse' %>

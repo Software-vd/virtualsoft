@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+tipodocs = Tipodoc.create([{descripcion: 'Cedula de ciudadania'}, {descripcion: 'Tarjeta de identidad'}])
+
+tamanos = Tamano.create([{descripcion: 'Pie'}, {descripcion: 'Pulgada'}, {descripcion: 'Rastra'}])
+
+tipos = Tipo.create([{Descripcion: 'Tablon'}, {Descripcion: 'Tabla'}, {Descripcion: 'Varilla'}, {Descripcion: 'Cuadrado'}])
+
+estadoentregas = Estadoentrega.create([{descripcion: 'Pendiente'}, {descripcion: 'Cancelado'}])

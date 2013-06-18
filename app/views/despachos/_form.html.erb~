@@ -4,8 +4,6 @@
 
 <%= f.error_notification %>
   <div class="span5">
-  <br>
-  <br>
   <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
   <%= f.input :encargado, :label => "Encargado",  :required => true %>
   <%= f.label :pagos_id %>

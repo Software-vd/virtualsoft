@@ -1,7 +1,9 @@
 <%= simple_form_for(@cliente, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
-  
+  <div class="span5">
+  <br>
+  <br>
   <%= f.label :tipodoc_id %>
-  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :sigla, :required => true, prompt: "Tipodoc"%>
+  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, :required => true, prompt: "Tipodoc"%>
   <br>
   <br>
   <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
@@ -9,7 +11,7 @@
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
   <%= f.input :telefono, :label => "Telefono",  :required => true %>
   <%= f.input :celular, :label => "Celular",  :required => true %>
-
+  </div>
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', clientes_path, :class => 'btn btn-inverse' %>

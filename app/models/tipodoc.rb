@@ -1,8 +1,8 @@
 class Tipodoc < ActiveRecord::Base
-  attr_accessible :sigla
+  attr_accessible :descripcion
   
-  validates :sigla, :presence => true,
-  :length => { :maximum => 5 }
+  validates :descripcion, :presence => true,
+  :length => { :maximum => 100 }
 
   belongs_to :cliente
 
