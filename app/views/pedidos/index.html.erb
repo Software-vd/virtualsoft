@@ -1,10 +1,10 @@
 <br>
 <br>
-<center><%= image_tag('pedido.jpg', :width=>'100') %></center>
+<center><%= image_tag('pedid.jpg', :width=>'100') %></center>
 <br>
 <hr>
 <%- model_class = Pedido -%>
-<center><h1>Pedidos</h1></center>
+<center><h1>Pedidos de <%= @cliente.nombres %></h1></center>
 <hr>
 <table class="table table-striped table-bordered table-condensed">
   <thead>
@@ -36,5 +36,3 @@
 <%= will_paginate @pedidos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 </div>
-
-

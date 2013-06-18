@@ -8,12 +8,12 @@
    <td><%= factura.cotizacion_id %></td>
    <td><%= factura.valor %></td>
    <td>
-    <%= link_to 'Mostrar', factura, :remote => true, :class => 'btn btn-mini btn-success' %>
-    <%= link_to 'Editar', edit_factura_path(factura), :remote => true,
-        :class => 'btn btn-mini btn-info' %>
-    <%= link_to 'Eliminar', factura, 
-        :data => { :confirm => 'Esta Seguro?' },
-        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), factura, :remote => true, :class => 'btn btn-mini btn-success' %>
+   <%= link_to image_tag('editar.gif', :title => "editar"), edit_factura_path(factura), :remote => true,
+       :class => 'btn btn-mini btn-info' %>
+   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), factura, 
+       :data => { :confirm => 'Esta Seguro?' },
+       :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
     <%= link_to 'Pdf', factura_path(factura, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
   </td>
 </tr>

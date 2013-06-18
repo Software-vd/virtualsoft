@@ -25,7 +25,7 @@ class FacturaPdf < Prawn::Document
     #{factura.apellido}
     #{factura.cantidad}
     #{factura.cotizacion_id}
-    #{factura.valor_id} ", :size => 13
+    #{factura.valor} ", :size => 13
  end
 
        def deliver_details
@@ -35,7 +35,7 @@ class FacturaPdf < Prawn::Document
                apellido = @factura.apellido
                cantidad = @factura.cantidad
                cotizacion = @factura.cotizacion_id
-               valor = @factura.valor_id
+               valor = @factura.valor
                table ([["Fecha","#{fecha}"],
                        ["Nombres","#{nombres}"],
                        ["Apellido","#{apellido}"],

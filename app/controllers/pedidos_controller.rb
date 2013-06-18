@@ -1,6 +1,11 @@
 class PedidosController < ApplicationController
+
   before_filter :require_login
+
   before_filter :relacion
+
+  layout 'fondo'
+
   def index
     #para rails 3.2.9 hasta 3.2.12(última versión a abril-2013)
     @pedidos = @cliente.pedidos.search(params[:search]).page(params[:page]).per_page(2)

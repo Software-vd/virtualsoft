@@ -14,7 +14,7 @@ class Pedido < ActiveRecord::Base
   validates :producto_id, :presence => true,
   :length => { :maximum => 80 }
 
-  validates :valor_id, :presence => true,
+  validates :valor, :presence => true,
   :length => { :maximum => 20 }
 
   belongs_to :cliente

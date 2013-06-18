@@ -8,12 +8,12 @@
   <td><%= cotizacion.producto_id %></td>
   <td><%= cotizacion.valor %></td>
   <td>
-    <%= link_to 'Mostrar', cotizacion, :remote => true, :class => 'btn btn-mini btn-success' %>
-    <%= link_to 'Editar', edit_cotizacion_path(cotizacion), :remote => true,
-        :class => 'btn btn-mini btn-info' %>
-    <%= link_to 'Eliminar', cotizacion, 
-        :data => { :confirm => 'Esta Seguro?' },
-        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), cotizacion, :remote => true, :class => 'btn btn-mini btn-success' %>
+   <%= link_to image_tag('editar.gif', :title => "editar"), edit_cotizacion_path(cotizacion), :remote => true,
+       :class => 'btn btn-mini btn-info' %>
+   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cotizacion, 
+       :data => { :confirm => 'Esta Seguro?' },
+       :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
     <%= link_to 'Pdf', cotizacion_path(cotizacion, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
   </td>
 </tr>

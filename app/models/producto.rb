@@ -10,7 +10,7 @@ class Producto < ActiveRecord::Base
   validates :tipo_id, :presence => true, 
   :length => { :maximum => 80 }
 
-  validates :valor_id, :presence => true, 
+  validates :valor, :presence => true, 
   :length => { :maximum => 80 }
   
   belongs_to :cotizacion

@@ -6,11 +6,11 @@
   <td><%= pago.factura_id %></td>
   <td><%= pago.valor %></td>
   <td>
-    <%= link_to 'Mostrar', pago, :remote => true, :class => 'btn btn-mini btn-success' %>
-    <%= link_to 'Editar', edit_pago_path(pago), :remote => true,
-        :class => 'btn btn-mini btn-info' %>
-    <%= link_to 'Eliminar', pago, 
-        :data => { :confirm => 'Esta Seguro?' },
-        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), pago, :remote => true, :class => 'btn btn-mini btn-success' %>
+   <%= link_to image_tag('editar.gif', :title => "editar"), edit_pago_path(pago), :remote => true,
+       :class => 'btn btn-mini btn-info' %>
+   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), pago, 
+       :data => { :confirm => 'Esta Seguro?' },
+       :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
   </td>
 </tr>

@@ -25,7 +25,7 @@ class CotizacionPdf < Prawn::Document
   #{@cotizacion.nombres}
   #{@cotizacion.apellidos}
   #{@cotizacion.producto_id}
-  #{@cotizacion.valor_id} ", :size => 13
+  #{@cotizacion.valor} ", :size => 13
  end
 
        def deliver_details
@@ -35,7 +35,7 @@ class CotizacionPdf < Prawn::Document
                nombres = @cotizacion.nombres
                apellidos = @cotizacion.apellidos
                producto = @cotizacion.producto_id
-               valor = @cotizacion.valor_id
+               valor = @cotizacion.valor
                table ([["Fecha","#{fecha}"],
                        ["Tipodoc","#{tipodoc}"],
                        ["Nombres","#{nombres}"],
