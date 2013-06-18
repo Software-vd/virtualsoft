@@ -1,54 +1,84 @@
-<ul class="nav">
-<!-- if user_signed_in? %> -->
-<li>
-<li>
-<%= link_to('Tipodocs', tipodocs_path) %>
-</li>
-</li>
-<li>
-<%= link_to('Tamaños', tamanos_path) %>
-</li>
-<li>
-<%= link_to('Tipos', tipos_path) %>
-</li>
-<li>
-<%= link_to('Productos', productos_path) %>
-</li>
-<li>
-<%= link_to('Clientes', clientes_path) %>
-</li>
-<!-- else %> -->
-<!-- end %> -->
-<!-- if user_signed_in? %> -->
-<li>
-<%= link_to('Cotizaciones', cotizaciones_path) %>
-</li>
-<li>
-<%= link_to('Facturas', facturas_path) %>
-</li>
-<li>
-<%= link_to('Pagos', pagos_path) %>
-</li>
-<li>
-<%= link_to('Estado entregas', estadoentregas_path) %>
-</li>
-<li>
-<%= link_to('Despachos', despachos_path) %>
-</li>
-<!-- else %> -->
-<li>
-<%= link_to "Salir", logout_path %>
-</li>
-<!-- end %> -->
-</ul>
-<div id="container">
-    <div class="user_nav">
-      <% if current_user %>
-      <font color="white">
-        Sesion iniciada en <%= current_user.email %>
-        <font color="black">
-      <% else %>
-        <%= link_to "Registrarse", signup_path %> o
-        <%= link_to "Iniciar sesion", login_path %>.
-      <% end %>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+ <meta name="keywords" content="jquery, css3, sliding, box, menu, cube, navigation, portfolio, thumbnails"/>
+
+<div id='menu' class="content">
+      <ul id="sdt_menu" class="sdt_menu">
+        <li>
+          <a href="#">
+            <img src="assets/config.png" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Config</span>
+              <span class="sdt_descr">config</span>
+            </span>
+          </a>
+           <div class="sdt_box">
+              <%= link_to "Tipo de Doc", tipodocs_path %> 
+              <%= link_to "Tamaños Madera", tamanos_path %> 
+              <%= link_to "Tipos de Madera", tipos_path %> 
+              <%= link_to "Estados Entregas", estadoentregas_path %> 
+          </div>
+        </li>
+        <li>
+          <a href="productos">
+            <img src="assets/madera.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Productos</span>
+              <span class="sdt_descr">Products</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="clientes">
+            <img src="assets/clientes.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Clientes</span>
+              <span class="sdt_descr">Clients</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="cotizaciones">
+            <img src="images/4.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Cotizacion</span>
+              <span class="sdt_descr">Quotes</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="facturas">
+            <img src="images/5.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Factura</span>
+              <span class="sdt_descr">Bill</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="pagos">
+            <img src="images/6.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Pagos</span>
+              <span class="sdt_descr">Payments</span>
+            </span>
+          </a>
+        </li>
+         <li id='des'>
+          <a href="despachos">
+            <img src="assets/despacho.jpg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Despachos</span>
+              <span class="sdt_descr">Offices</span>
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>

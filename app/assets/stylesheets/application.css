@@ -54,3 +54,57 @@
   border: none;
   box-shadow: none;
 }
+div#config {
+  margin-top: -30px;
+  margin-left: 35%;
+  width: 20%;
+height: 200px;
+background-color: #999494;
+}
+
+img#config{
+  margin-top: -70px;
+  margin-left: 330px;
+}
+
+}
+      span.reference{
+        position:fixed;
+        left:10px;
+        bottom:10px;
+        font-size:12px;
+      }
+      span.reference a{
+        color:#aaa;
+        text-transform:uppercase;
+        text-decoration:none;
+        text-shadow:1px 1px 1px #000;
+        margin-right:30px;
+      }
+      span.reference a:hover{
+        color:#ddd;
+      }
+      ul.sdt_menu{
+        margin-top:150px;
+      }
+      h1.title{
+        text-indent:-9000px;
+        background:transparent url(title.png) no-repeat top left;
+        width:633px;
+        height:69px;
+      }
+
+
+      div#menu{
+        margin-top: 50px;
+        margin-left: -100px;
+      }
+
+      li#des{
+        margin-top: -85px;
+        margin-left: 1020px;
+      }
+
+      div#con{
+        margin-top: 80px;
+      }
