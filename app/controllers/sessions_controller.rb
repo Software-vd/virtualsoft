@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
   	user = login(params[:username], params[:password], params[:remember_me])
   	if user
-  		redirect_back_or_to tipodocs_path
+  		redirect_back_or_to home_path
   	else
   		flash.now.alert = "Email or password was invalid"
   	end

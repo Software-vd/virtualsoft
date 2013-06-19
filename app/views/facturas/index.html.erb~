@@ -7,10 +7,13 @@
 <%= form_tag request.path, :method => 'get' do %>
 <%= content_tag :label do %>
 Factura
+<BR>
 <%= text_field_tag :search, params[:search] %>
+<BR>
 <%= submit_tag "Buscar", :class => 'btn btn-inverse', :name => nil %>
 <% end %>
 <% end %>
+<br />
 </center>
 <hr>
 <br><br><br><br><br><br><br><br>

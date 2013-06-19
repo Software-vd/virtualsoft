@@ -4,6 +4,16 @@
 
 <div id='menu' class="content">
       <ul id="sdt_menu" class="sdt_menu">
+         <li id='home'>
+          <a href="home">
+            <img src="assets/homee.png" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Inicio</span>
+              <span class="sdt_descr">Home</span>
+            </span>
+          </a>
+        </li>
         <li>
           <a href="#">
             <img src="assets/config.png" alt=""/>
@@ -32,7 +42,7 @@
         </li>
         <li>
           <a href="clientes">
-            <img src="assets/clientes.jpg" alt=""/>
+            <img src="assets/cliente.png" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Clientes</span>
@@ -42,7 +52,7 @@
         </li>
         <li>
           <a href="cotizaciones">
-            <img src="images/4.jpg" alt=""/>
+            <img src="assets/cotizacion.jpg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Cotizacion</span>
@@ -52,7 +62,7 @@
         </li>
         <li>
           <a href="facturas">
-            <img src="images/5.jpg" alt=""/>
+            <img src="assets/factura.jpg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Factura</span>
@@ -62,7 +72,7 @@
         </li>
         <li>
           <a href="pagos">
-            <img src="images/6.jpg" alt=""/>
+            <img src="assets/pago.jpg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Pagos</span>
@@ -72,7 +82,7 @@
         </li>
          <li id='des'>
           <a href="despachos">
-            <img src="assets/despacho.jpg" alt=""/>
+            <img src="assets/despacho.png" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Despachos</span>
@@ -82,3 +92,6 @@
         </li>
       </ul>
     </div>
+   <div id='sal'>
+<%= link_to "Salir", logout_path, :class=> 'btn btn-inverse' %>
+</div>

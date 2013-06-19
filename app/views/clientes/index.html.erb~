@@ -2,7 +2,8 @@
 <center><img src="assets/clientes.jpg"></center>
 <%- model_class = Cliente -%>
 <center>
-<br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<hr>
 <hr>
 <%= form_tag request.path, :method => 'get' do %>
 <%= content_tag :label do %>

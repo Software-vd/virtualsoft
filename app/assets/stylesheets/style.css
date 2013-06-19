@@ -1,4 +1,6 @@
 ul.sdt_menu{
+	background-image: url('cafe.jpg');
+	color: black;
 	margin:0;
 	padding:0;
 	list-style: none;
@@ -7,10 +9,14 @@ ul.sdt_menu{
 	width:1020px;
 }
 ul.sdt_menu a{
+	color: black;
+		background-image: url('cafe.jpg');
 	text-decoration:none;
 	outline:none;
 }
 ul.sdt_menu li{
+	background-image: url('cafe.jpg');
+	color: black;
 	float:left;
 	width:170px;
 	height:85px;
@@ -18,18 +24,22 @@ ul.sdt_menu li{
 	cursor:pointer;
 }
 ul.sdt_menu li > a{
+	background-image: url('cafe.jpg');
+	color: black;
 	position:absolute;
 	top:0px;
 	left:0px;
 	width:170px;
 	height:85px;
 	z-index:12;
-	background:transparent url('assets/gris.jpg') no-repeat bottom right;
+	
 	-moz-box-shadow:0px 0px 2px #000 inset;
 	-webkit-box-shadow:0px 0px 2px #000 inset;
 	box-shadow:0px 0px 2px #000 inset;
 }
 ul.sdt_menu li a img{
+	background-image: url('cafe.jpg');
+	color: black;
 	border:none;
 	position:absolute;
 	width:0px;
@@ -42,6 +52,8 @@ ul.sdt_menu li a img{
 	box-shadow:0px 0px 4px #000;
 }
 ul.sdt_menu li span.sdt_wrap{
+	background-image: url('cafe.jpg');
+	color: black;
 	position:absolute;
 	top:25px;
 	left:0px;
@@ -50,6 +62,8 @@ ul.sdt_menu li span.sdt_wrap{
 	z-index:15;
 }
 ul.sdt_menu li span.sdt_active{
+	background-image: url('cafe.jpg');
+	color: black;
 	position:absolute;
 	background:#111;
 	top:85px;
@@ -64,18 +78,19 @@ ul.sdt_menu li span.sdt_active{
 ul.sdt_menu li span span.sdt_link,
 ul.sdt_menu li span span.sdt_descr,
 ul.sdt_menu li div.sdt_box a{
+	color: black;
 	margin-left:15px;
 	text-transform:uppercase;
 	text-shadow:1px 1px 1px #000;
 }
 ul.sdt_menu li span span.sdt_link{
-	color:#fff;
+	color: black ;
 	font-size:24px;
 	float:left;
 	clear:both;
 }
 ul.sdt_menu li span span.sdt_descr{
-	color:#0B75AF;
+	color: #0B75AF;
 	float:left;
 	clear:both;
 	width:155px; /*For dumbass IE7*/
@@ -97,11 +112,11 @@ ul.sdt_menu li div.sdt_box a{
 	float:left;
 	clear:both;
 	line-height:30px;
-	color:#0B75AF;
+	color: white;
 }
 ul.sdt_menu li div.sdt_box a:first-child{
 	margin-top:15px;
 }
 ul.sdt_menu li div.sdt_box a:hover{
-	color:#fff;
+	color:black;
 }

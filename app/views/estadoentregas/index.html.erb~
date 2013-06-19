@@ -4,7 +4,7 @@
 <%- model_class = Estadoentrega -%>
 <center>
 <div class="page-header">
-<h1>Estados Entregas</h1>
+<h1>Estado Entregas</h1>
 </div>
 </center>
 <br><br><br><br><br><br>

@@ -1,50 +1,49 @@
-<br><br><br><br><br><br><br><br>
+<br>
+<br>
 <center>
-<%- model_class = Factura -%>
+<%- model_class = Pago -%>
 <div class="page-header">
-  <h1>Factura</h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
 <%= form_tag request.path, :method => 'get' do %>
 <%= content_tag :label do %>
-Factura
+Pago
+<br>
 <%= text_field_tag :search, params[:search] %>
+<br>
 <%= submit_tag "Buscar", :class => 'btn btn-inverse', :name => nil %>
 <% end %>
 <% end %>
+<br />
 </center>
-<hr>
-<br><br><br><br><br><br><br><br>
 <table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
       <th>id</th>
       <th>Fecha</th>
       <th>Nombres</th>
-      <th>Apellido</th>
-      <th>Cantidad</th>
-      <th>Productos</th>
-      <th>Cotizacion</th>
+      <th>Apellidos</th>
+      <th>Factura</th>
       <th>Valor</th>
-       <th></th>
     </tr>
   </thead>
   <tbody>
-   <%= render @facturas %>
+    <%= render @pagos %>
   </tbody>
   <tfoot>
     <tr>
     </tr>
   </tfoot>
 </table>
- <center><td><%= link_to 'Nueva factura', new_factura_path, :class => 'btn btn-success', :remote => true %></td></center>
+<center><td><%= link_to 'Nuevo pago', new_pago_path, :class => 'btn btn-success', :remote => true %></td></center>
 <br />
 <br />
 <div align="center">
-<%= will_paginate @facturas, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+<%= will_paginate @pagos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 </div>
 <p>
   <center>
-Total Facturas : <%= @facturas.total_entries %>
+Total Pagos : <%= @pagos.total_entries %>
 </center>
 </p>

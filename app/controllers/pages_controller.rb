@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
+
   def index
-  	@tittle = "index"
+  	@tittle = 'Index'
   end
 end

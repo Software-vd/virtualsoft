@@ -68,13 +68,21 @@ img#config{
 }
 
 }
+
+      body{
+        background-color: red;
+        font-family:Arial;
+      }
+
       span.reference{
+        background-color: red;
         position:fixed;
         left:10px;
         bottom:10px;
         font-size:12px;
       }
       span.reference a{
+        background-color: red;
         color:#aaa;
         text-transform:uppercase;
         text-decoration:none;
@@ -82,22 +90,26 @@ img#config{
         margin-right:30px;
       }
       span.reference a:hover{
+        background-color: red;
         color:#ddd;
       }
       ul.sdt_menu{
+        background-color: red;
         margin-top:150px;
       }
       h1.title{
+        background-color: red;
         text-indent:-9000px;
-        background:transparent url(title.png) no-repeat top left;
         width:633px;
         height:69px;
       }
 
 
       div#menu{
+        color: black;
+        background-color: red;
         margin-top: 50px;
-        margin-left: -100px;
+        margin-left: 75px;
       }
 
       li#des{
@@ -105,6 +117,51 @@ img#config{
         margin-left: 1020px;
       }
 
+   li#home{
+    margin-left: -170px;
+   }
+
       div#con{
         margin-top: 80px;
       }
+
+    div#sal{
+      float: right;
+      margin-top: -130px;
+    }
+
+
+div#ho{
+  margin-top: 100px;
+}
+
+h1#ase {
+  width: auto;
+  color:black;
+  font-weight: bold;
+  font-size:25px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 1px 0px 1px 5px;
+  border: 4px;
+
+}
+
+footer#footer{
+  margin-left: -100px;
+  width: 117%;
+  margin-top: 540px;
+  height: 50px;
+  border-radius: 4px;
+  background-image: url('cafe.jpg');
+}
+
+
+
+p#dere{
+  padding-left: 30px;
+  padding-top: 15px;
+  font-size: 15px;
+}
+

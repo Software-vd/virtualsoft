@@ -2,9 +2,7 @@
 <hr>
 <%- model_class = Tamano -%>
 <center>
-<div class="page-header">
   <h1>Tamaños</h1>
-</div>
 </center>
 <br><br><br><br><br><br><br><br>
 <table class="table table-striped table-bordered table-condensed">
