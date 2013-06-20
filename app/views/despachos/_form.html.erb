@@ -3,7 +3,6 @@
 <%= simple_form_for(@despacho, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
 <%= f.error_notification %>
-  <div class="span5">
   <br>
   <br>
   <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
@@ -14,10 +13,9 @@
   <br>
   <%= f.label :estado_entrega_id %>
   <%= f.collection_select :estado_entrega_id, Estadoentrega.all, :id, :descripcion, prompt: "Estadoentrega"  %>
-  </div>
-
-  <div class="form-actions">
+  <br><br><br>
+  <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', despachos_path, :class => 'btn btn-inverse' %>
-  </div>
+  </center>
 <% end %>

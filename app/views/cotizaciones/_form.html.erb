@@ -1,7 +1,6 @@
 <%= javascript_include_tag "cotizaciones.js" %>
 
 <%= simple_form_for(@cotizacion, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
-  <div class="span5">
   <br>
   <br>
   <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
@@ -17,9 +16,8 @@
   <br>
   <br>
   <%= f.input :valor, :label => "Valor",  :required => true %>
-  </div>
-  <div class="form-actions">
+  <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', cotizaciones_path, :class => 'btn btn-inverse' %>
-  </div>
+  </center>
 <% end %>

@@ -1,5 +1,4 @@
 <%= simple_form_for(@cliente, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
-  <div class="span5">
   <br>
   <br>
   <%= f.label :tipodoc_id %>
@@ -11,9 +10,8 @@
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
   <%= f.input :telefono, :label => "Telefono",  :required => true %>
   <%= f.input :celular, :label => "Celular",  :required => true %>
-  </div>
-  <div class="form-actions">
+  <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', clientes_path, :class => 'btn btn-inverse' %>
-  </div>
+  <center>
 <% end %>
