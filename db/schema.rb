@@ -54,15 +54,16 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
 
   create_table "facturas", :force => true do |t|
     t.string   "fecha"
-    t.string   "numero_factura"
+    t.string   "tipodoc_id"
+    t.string   "numero_documento"
     t.string   "nombres"
-    t.string   "apellido"
+    t.string   "apellidos"
     t.string   "cantidad"
     t.string   "producto_id"
     t.integer  "cotizacion_id"
     t.string   "valor"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "pagos", :force => true do |t|

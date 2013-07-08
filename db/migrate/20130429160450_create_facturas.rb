@@ -2,9 +2,10 @@ class CreateFacturas < ActiveRecord::Migration
   def change
     create_table :facturas do |t|
       t.string :fecha
-      t.string :numero_factura
+      t.string :tipodoc_id
+      t.string :numero_documento
       t.string :nombres
-      t.string :apellido
+      t.string :apellidos
       t.string :cantidad
       t.string :producto_id
       t.integer :cotizacion_id

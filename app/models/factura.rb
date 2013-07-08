@@ -1,11 +1,11 @@
 class Factura < ActiveRecord::Base
-  attr_accessible :apellido, :cantidad, :fecha, :nombres, :producto_id, :cotizacion_id, :valor
+  attr_accessible :apellidos, :cantidad, :fecha, :nombres, :producto_id, :cotizacion_id, :valor, :tipodoc_id, :numero_documento
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")
   end
   
-  validates :nombres, :apellido, :presence => true,
+  validates :nombres, :apellidos, :presence => true,
   :length => { :maximum => 80 }
   
   validates :cantidad, :presence => true,
@@ -25,4 +25,6 @@ class Factura < ActiveRecord::Base
   belongs_to :pago
 
   belongs_to :productos
+
+  has_many :tipodocs
 end

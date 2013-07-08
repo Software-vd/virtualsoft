@@ -13,47 +13,87 @@
  *= require lazybox
  */
 
-#lazybox div.cliente { max-width: 500px; }
+#lazybox div.cliente { max-width: 500px;}
 
-.lazybox {
-  background: transparent !important;
+#lazybox {
+   background-image: url('cafe.jpg');
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 5px #333;
+  display: none;
+  left: 49%;
+  padding: 20px;
+  position: absolute;
+  top: 49%;
+  z-index: 1001;
+  &.confirm { max-width: 300px;  }
+  .lazy_buttons { margin-top: 15px; text-align: right;  }
+  img.lazy_img { display: block; }
+  #lazybox_body { position: relative;  }
 }
-
 #lazybox_close.img {
- background: url('close.png') no-repeat;
- width: 30px;
- height: 25px;
- top: -4px;
- right: -17px;
+  background: url('close.png') no-repeat;
+  width: 25px;
+  height: 25px;
+  top: -17px;
+  right: -17px;
 }
 
-#lazybox.sticker {
-  -webkit-border-bottom-left-radius: 20px 500px;
-  -webkit-border-bottom-right-radius: 500px 30px;
-  -webkit-border-top-right-radius: 5px 100px;
-  -moz-border-radius-bottomleft: 20px 500px;
-  -moz-border-radius-bottomright: 500px 30px;
-  -moz-border-radius-topright: 5px 100px;
-  border-radius-bottomleft: 20px 500px;
-  border-radius-bottomright: 500px 30px;
-  border-radius-topright: 5px 100px;
-  border-bottom-left-radius: 20px 500px;
-  border-bottom-right-radius: 500px 30px;
-  border-top-right-radius: 5px 100px;
-}
-
-#lazybox.top {
-  border-radius: 0px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border: none;
+#lazybox.lazybox {
+  padding: 0;
+  border: 5px solid #222;
+  border-radius: 0;
+  @include box-shadow(0 0 50px 10px cyan);
 }
 
 #lazybox.player {
-  background: transparent;
   border: none;
-  box-shadow: none;
+  background: #222;
+  border-radius: 0;
+  @include box-shadow(0 0 50px 10px magenta);
 }
+
+#lazybox.confirm {
+  border-radius: 0;
+  border: 3px solid #222;
+  @include box-shadow(0 0 50px 10px magenta);
+  @include linear-gradient(gray, #222);
+  a#lazybox_close { display: none; }
+}
+
+#lazybox.custom {
+  @include linear-gradient(#222, #333);
+  border: 1px solid #0E0E0E;
+  @include box-shadow(0 0 50px 10px magenta);
+  a#lazybox_close {
+    color: cyan;
+    top: -10px;
+    right: 10px;
+    font: bold 54px/100% Arial, Helvetica, sans-serif;
+    &:hover { color: magenta; }
+  }
+}
+
+#lazybox.top {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+
+#lazybox.sticker {
+ -webkit-border-bottom-left-radius: 20px 500px;
+ -webkit-border-bottom-right-radius: 500px 30px;
+ -webkit-borblockquote der-top-right-radius: 5px 100px;
+ -moz-border-radius-bottomleft: 20px 500px;
+ -moz-border-radius-bottomright: 500px 30px;
+ -moz-border-radius-topright: 5px 100px;
+ border-radius-bottomleft: 20px 500px;
+ border-radius-bottomright: 500px 30px;
+ border-radius-topright: 5px 100px;
+ border-bottom-left-radius: 20px 500px;
+ border-bottom-right-radius: 500px 30px;
+ border-top-right-radius: 5px 100px;
+}blockquote 
 div#config {
   margin-top: -30px;
   margin-left: 35%;
@@ -105,30 +145,30 @@ img#config{
       }
 
 
-      div#menu{
-        color: black;
-        background-color: red;
-        margin-top: 50px;
-        margin-left: 75px;
-      }
+div#menu{
+ color: black;
+  background-color: red;
+  margin-top: 50px;
+  margin-left: 75px;
+}
 
-      li#des{
-        margin-top: -85px;
-        margin-left: 1020px;
-      }
+li#des{
+  margin-top: -85px;
+  margin-left: 1020px;
+}
 
-   li#home{
-    margin-left: -170px;
-   }
+li#home{
+  margin-left: -170px;
+}
 
-      div#con{
-        margin-top: 80px;
-      }
+div#con{
+  margin-top: 80px;
+}
 
-    div#sal{
-      float: right;
-      margin-top: -130px;
-    }
+div#sal{
+  float: right;
+  margin-top: -130px;
+}
 
 
 div#ho{
@@ -151,7 +191,7 @@ h1#ase {
 footer#footer{
   margin-left: -100px;
   width: 117%;
-  margin-top: 540px;
+  margin-top: 75px;
   height: 50px;
   border-radius: 4px;
   background-image: url('cafe.jpg');
@@ -165,3 +205,22 @@ p#dere{
   font-size: 15px;
 }
 
+blockquote#text{
+  margin-top: 80px;
+}
+
+img#ase{
+  margin-left: 150px;
+  width: 200px;
+  margin-top: 40px;
+}
+img#gal{
+  margin-left: 900px;
+  width: 300px;
+  margin-top: -220px;
+}
+img#ser{
+  margin-left: 600px;
+  width: 300px;
+  margin-top: -255px;
+}

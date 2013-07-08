@@ -21,8 +21,10 @@ class FacturaPdf < Prawn::Document
    move_down 60
    text "Factura:
     #{factura.fecha}
+    #{factura.tipodoc_id}
+    #{factura.numero_documento}
     #{factura.nombres}
-    #{factura.apellido}
+    #{factura.apellidos}
     #{factura.cantidad}
     #{factura.cotizacion_id}
     #{factura.valor} ", :size => 13
@@ -31,14 +33,18 @@ class FacturaPdf < Prawn::Document
        def deliver_details
                move_down 60
                fecha = @factura.fecha
+               tipodoc = @factura.tipodoc_id
+               numero_documento = @factura.numero_documento
                nombres = @factura.nombres
                apellido = @factura.apellido
                cantidad = @factura.cantidad
                cotizacion = @factura.cotizacion_id
                valor = @factura.valor
                table ([["Fecha","#{fecha}"],
+                       ["Tipodoc","#{tipodoc}"],
+                       ["Numero_documento","#{numero_documento}"],
                        ["Nombres","#{nombres}"],
-                       ["Apellido","#{apellido}"],
+                       ["Apellido","#{apellidos}"],
                        ["Cantidad","#{cantidad}"],
                        ["Cotizacion","#{cotizacion}"],
                        ["Valor","#{valor}"],

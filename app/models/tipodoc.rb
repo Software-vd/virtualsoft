@@ -7,4 +7,6 @@ class Tipodoc < ActiveRecord::Base
   belongs_to :cliente
 
   belongs_to :cotizacion
+
+  belongs_to :factura
 end
