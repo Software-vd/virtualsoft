@@ -5,13 +5,11 @@
   <br>
  <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
   <%= f.label :producto_id %>
-  <%= f.collection_select :producto_id, Producto.all, :id, :codigo, prompt: "Producto"  %>
-  <br>
-  <br>
-  <%= f.input :valor, :label => "Valor",  :required => true %>
+  <%= f.collection_select :producto_id, Producto.all, :id, :tipo_id, prompt: "Producto"  %>
   <br>
   <br>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
+  <%= f.input :valor, :label => "Valor",  :required => true %>
   </div>
   <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>

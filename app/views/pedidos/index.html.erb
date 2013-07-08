@@ -5,15 +5,15 @@
 <%- model_class = Pedido -%>
 <center><h1>Pedidos de <%= @cliente.nombres %></h1></center>
 <hr>
-<br><br><br><br><br><br><br><br><br>
+<br><br>
 <table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
       <th>id</th>
       <th>Fecha</th>
       <th>Producto</th>
-      <th>Valor</th>
       <th>Cantidad</th>
+      <th>Valor</th>
       <th></th>
     </tr>
   </thead>
@@ -25,6 +25,9 @@
       <td><%= link_to 'Nuevo Pedido', new_cliente_pedido_path(@cliente), :class => 'btn btn-success', :remote => true %></td>
       <td>
         Total Pedidos : <%= @pedidos.total_entries %>
+      </td>
+      <td>
+      <p align="right">Total = $<%= number_to_currency(@pedidos.sum(&:valor), :precision => 0, :unit => "", :delimiter => ".") %></p>
       </td>
     </tr>
   </tfoot>

@@ -93,5 +93,13 @@
       </ul>
     </div>
    <div id='sal'>
-<%= link_to "Salir", logout_path, :class=> 'btn btn-inverse' %>
-</div>
+    <% if current_user %>
+      <font color="white">
+        Sesion iniciada en <%= current_user.email %>
+        <font color="black">
+      <% else %>
+        <%= link_to "Registrarse", signup_path %> o
+        <%= link_to "Iniciar sesion", login_path %>.
+      <% end %>
+    <%= link_to "Salir", logout_path, :class=> 'btn btn-inverse' %> 
+    </div>

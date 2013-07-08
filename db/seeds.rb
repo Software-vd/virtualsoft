@@ -10,6 +10,6 @@ tipodocs = Tipodoc.create([{descripcion: 'Cedula de ciudadania'}, {descripcion: 
 
 tamanos = Tamano.create([{descripcion: 'Pie'}, {descripcion: 'Pulgada'}, {descripcion: 'Rastra'}])
 
-tipos = Tipo.create([{Descripcion: 'Tablon'}, {Descripcion: 'Tabla'}, {Descripcion: 'Varilla'}, {Descripcion: 'Cuadrado'}])
+tipos = Tipo.create([{Descripcion: 'Tablon'}, {Descripcion: 'Tabla'}, {Descripcion: 'Varilla'}, {Descripcion: 'Cuadro'}, {Descripcion: 'Larguero'}, {Descripcion: 'Can'}])
 
 estadoentregas = Estadoentrega.create([{descripcion: 'Pendiente'}, {descripcion: 'Cancelado'}])

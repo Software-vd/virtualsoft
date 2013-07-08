@@ -2,9 +2,8 @@
   <td><%= link_to pedido.id, edit_cliente_pedido_path(@cliente, pedido), :remote => true %></td>
   <td><%= pedido.fecha %></td>
   <td><%= pedido.producto_id %></td>
-  <td><%= pedido.valor %></td>
   <td><%= pedido.cantidad %></td>
-  
+  <td><%= pedido.valor %></td>
   <td>
     <%= link_to image_tag('ver.gif', :title => "mostrar"), cliente_pedido_path(@cliente, pedido), :remote => true, :class => 'btn btn-mini btn-success' %>
     <%= link_to image_tag('editar.gif', :title => "editar"), edit_cliente_pedido_path(@cliente, pedido), :remote => true,

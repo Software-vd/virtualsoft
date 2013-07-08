@@ -1,8 +1,5 @@
 class Producto < ActiveRecord::Base
-  attr_accessible :codigo, :tamano_id, :tipo_id, :valor
-  
-  validates :codigo, :presence => true, 
-  :length => { :maximum => 80 }
+  attr_accessible :tamano_id, :tipo_id, :valor
 
   validates :tamano_id, :presence => true, 
   :length => { :maximum => 80 }
