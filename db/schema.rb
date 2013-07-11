@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "numero_documento"
     t.string   "nombres"
     t.string   "apellidos"
+    t.string   "direccion"
     t.string   "telefono"
     t.string   "celular"
     t.datetime "created_at",       :null => false
@@ -25,13 +26,16 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "cotizaciones", :force => true do |t|
+    t.string   "ciudad"
     t.string   "fecha"
-    t.string   "numero_cotizacion"
     t.integer  "tipodoc_id"
     t.string   "numero_documento"
     t.string   "nombres"
     t.string   "apellidos"
-    t.integer  "producto_id"
+    t.string   "direccion"
+    t.string   "telefono"
+    t.string   "cantidad"
+    t.string   "articulos"
     t.string   "valor"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
@@ -41,7 +45,6 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "fecha"
     t.string   "encargado"
     t.integer  "pagos_id"
-    t.integer  "estado_entrega_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
@@ -71,9 +74,10 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "nombres"
     t.string   "apellidos"
     t.integer  "factura_id"
-    t.float   "valor"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "estado_entrega_id"
+    t.string   "valor"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "pedidos", :force => true do |t|
@@ -82,7 +86,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "cantidad"
     t.integer  "producto_id"
     t.integer  "cliente_id"
-    t.string   "valor"
+    t.float    "valor"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

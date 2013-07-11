@@ -4,7 +4,6 @@ class CreateDespachos < ActiveRecord::Migration
       t.string :fecha
       t.string :encargado
       t.integer :pagos_id
-      t.integer :estado_entrega_id
 
       t.timestamps
     end

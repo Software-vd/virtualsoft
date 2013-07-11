@@ -3,7 +3,6 @@
   <td><%= despacho.fecha %></td>
   <td><%= despacho.encargado %></td>
   <td><%= despacho.pagos_id %></td>
-  <td><%= despacho.estado_entrega_id %></td>
   <td>
     <%= link_to image_tag('ver.gif', :title => "mostrar"), despacho, :remote => true, :class => 'btn btn-mini btn-success' %>
    <%= link_to image_tag('editar.gif', :title => "editar"), edit_despacho_path(despacho), :remote => true,

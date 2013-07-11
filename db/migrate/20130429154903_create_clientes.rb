@@ -5,6 +5,7 @@ class CreateClientes < ActiveRecord::Migration
       t.string :numero_documento
       t.string :nombres
       t.string :apellidos
+      t.string :direccion
       t.string :telefono
       t.string :celular
 

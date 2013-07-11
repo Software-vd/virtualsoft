@@ -6,4 +6,6 @@ class Estadoentrega < ActiveRecord::Base
   :length => { :maximum => 10 }
 
   belongs_to :despacho
+
+  has_many :pagos
 end

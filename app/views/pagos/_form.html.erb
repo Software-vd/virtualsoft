@@ -6,6 +6,10 @@
   <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
+  <%= f.label :estado_entrega_id %>
+  <%= f.collection_select :estado_entrega_id, Estadoentrega.all, :id, :descripcion, prompt: "Estadoentrega"  %>
+  <br>
+  <br>
   <%= f.label :factura_id %>
   <%= f.collection_select :factura_id, Factura.all, :id, :cantidad, prompt: "Factura"  %>
   <br>
