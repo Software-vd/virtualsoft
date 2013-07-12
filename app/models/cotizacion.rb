@@ -1,5 +1,5 @@
 class Cotizacion < ActiveRecord::Base
-  attr_accessible :apellidos, :fecha, :nombres, :numero_documento, :tipodoc_id, :valor, :ciudad, :direccion, :telefono, :cantidad, :articulos
+  attr_accessible :apellidos, :fecha, :nombres, :numero_documento, :tipodoc_id, :valor, :ciudad, :direccion, :telefono, :cantidad, :producto_id
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")
@@ -22,5 +22,6 @@ has_many :tipodocs
 
 has_many :productos
 
-belongs_to :factura
+belongs_to :facturas
+
 end

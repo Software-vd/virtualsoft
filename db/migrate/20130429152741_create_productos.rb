@@ -1,8 +1,7 @@
 class CreateProductos < ActiveRecord::Migration
   def change
     create_table :productos do |t|
-      t.integer :tamano_id
-      t.integer :tipo_id
+      t.string :descripcion
       t.string :valor
 
       t.timestamps

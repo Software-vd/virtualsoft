@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   create_table "cotizaciones", :force => true do |t|
     t.string   "ciudad"
     t.string   "fecha"
+    t.string   "numero_cotizacion"
     t.integer  "tipodoc_id"
     t.string   "numero_documento"
     t.string   "nombres"
@@ -35,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "direccion"
     t.string   "telefono"
     t.string   "cantidad"
-    t.string   "articulos"
+    t.string   "producto_id"
     t.string   "valor"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
@@ -45,8 +46,8 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "fecha"
     t.string   "encargado"
     t.integer  "pagos_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "estadoentregas", :force => true do |t|
@@ -63,7 +64,6 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "apellidos"
     t.string   "cantidad"
     t.string   "producto_id"
-    t.integer  "cotizacion_id"
     t.string   "valor"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
@@ -80,23 +80,11 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.datetime "updated_at",        :null => false
   end
 
-  create_table "pedidos", :force => true do |t|
-    t.string   "fecha"
-    t.string   "numero_pedido"
-    t.string   "cantidad"
-    t.integer  "producto_id"
-    t.integer  "cliente_id"
-    t.float    "valor"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
   create_table "productos", :force => true do |t|
-    t.integer  "tamano_id"
-    t.integer  "tipo_id"
+    t.string   "descripcion"
     t.string   "valor"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "tamanos", :force => true do |t|

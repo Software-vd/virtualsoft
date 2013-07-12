@@ -15,6 +15,4 @@ class Cliente < ActiveRecord::Base
         
   has_many :tipodocs
 
-  has_many :pedidos
-
 end

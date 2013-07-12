@@ -35,7 +35,7 @@ class CotizacionPdf < Prawn::Document
     #{@cotizacion.direccion}
     #{@cotizacion.telefono}
     #{@cotizacion.cantidad}
-    #{@cotizacion.articulos}
+    #{@cotizacion.producto_id}
     #{@cotizacion.valor} ", :size => 13
   end
 
@@ -50,7 +50,7 @@ class CotizacionPdf < Prawn::Document
     direccion = @cotizacion.direccion
     telefono = @cotizacion.telefono
     cantidad = @cotizacion.cantidad
-    articulos = @cotizacion.articulos
+    articulos = @cotizacion.producto_id
     valor = @cotizacion.valor
     table ([["Ciudad","Fecha"],
             ["#{ciudad}","#{fecha}"]]),
@@ -83,10 +83,10 @@ class CotizacionPdf < Prawn::Document
     direccion = @cotizacion.direccion
     telefono = @cotizacion.telefono
     cantidad = @cotizacion.cantidad
-    articulos = @cotizacion.articulos
+    articulos = @cotizacion.producto_id
     valor = @cotizacion.valor
-    table ([["Cantidad","Articulos","Valor"],
-            ["#{cantidad}","#{articulos}","#{valor}"]]),
+    table ([["Cantidad","Producto","Valor"],
+            ["#{cantidad}","#{producto}","#{valor}"]]),
             :width => 500 do
             columns(1).align = :center
             self.header = true

@@ -11,7 +11,7 @@ class CreateCotizaciones < ActiveRecord::Migration
       t.string :direccion
       t.string :telefono
       t.string :cantidad
-      t.string :articulos
+      t.string :producto_id
       t.string :valor
 
       t.timestamps

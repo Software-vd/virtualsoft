@@ -4,7 +4,7 @@
 <br>
 <br>
 <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
-  <%= f.label :tipodoc_id %>
+  <%= f.label :tipodoc_id %>:::
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, :required => true, prompt: "Tipodoc"%>
   <br>
   <br>
@@ -12,12 +12,8 @@
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
-  <%= f.label :producto_id %>
-  <%= f.collection_select :producto_id, Producto.all, :id, :tipo_id, prompt: "Producto"  %>
-  <br>
-  <br>
-  <%= f.label :cotizacion_id %>
-  <%= f.collection_select :cotizacion_id, Cotizacion.all, :id, :fecha, prompt: "Cotizacion"  %>
+  <%= f.label :producto_id %>:::
+  <%= f.collection_select :producto_id, Producto.all, :id, :descripcion, prompt: "Producto"  %>
   <br>
   <br>
   <%= f.input :valor, :label => "Valor",  :required => true %>
