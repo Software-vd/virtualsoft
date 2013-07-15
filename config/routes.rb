@@ -15,16 +15,15 @@ Softmade::Application.routes.draw do
   resources :tamanos
 
 
-  resources :clientes
+  resources :clientes do
+    resources :cotizaciones
+  end
 
   
   resources :pedidos
   
 
   resources :tipodocs
-
-
-  resources :cotizaciones
 
 
   resources :despachos

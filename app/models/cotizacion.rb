@@ -22,6 +22,8 @@ has_many :tipodocs
 
 has_many :productos
 
-belongs_to :facturas
+belongs_to :factura
+
+belongs_to :cliente
 
 end

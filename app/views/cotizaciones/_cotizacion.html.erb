@@ -1,5 +1,5 @@
 <tr id=<%= "cotizacion_#{cotizacion.id}" %>>
-  <td><%= link_to cotizacion.id, edit_cotizacion_path(cotizacion), :remote => true %></td>
+  <td><%= link_to cotizacion.id, edit_cliente_cotizacion_path(@cliente,cotizacion), :remote => true %></td>
   <td><%= cotizacion.ciudad %></td>
   <td><%= cotizacion.fecha %></td>
   <td><%= cotizacion.tipodoc_id %></td>
@@ -12,12 +12,12 @@
   <td><%= cotizacion.producto_id %></td>
   <td><%= cotizacion.valor %></td>
   <td>
-    <%= link_to image_tag('ver.gif', :title => "mostrar"), cotizacion, :remote => true, :class => 'btn btn-mini btn-success' %>
-   <%= link_to image_tag('editar.gif', :title => "editar"), edit_cotizacion_path(cotizacion), :remote => true,
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), cliente_cotizacion_path(@cliente,cotizacion), :remote => true, :class => 'btn btn-mini btn-success' %>
+   <%= link_to image_tag('editar.gif', :title => "editar"), edit_cliente_cotizacion_path(@cliente,cotizacion), :remote => true,
        :class => 'btn btn-mini btn-info' %>
-   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cotizacion, 
+   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cliente_cotizacion_path(@cliente,cotizacion), 
        :data => { :confirm => 'Esta Seguro?' },
        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
-    <%= link_to 'Pdf', cotizacion_path(cotizacion, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
+    <%= link_to 'Pdf', cliente_cotizacion_path(@cliente,cotizacion, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
   </td>
 </tr>
