@@ -26,4 +26,6 @@ belongs_to :factura
 
 belongs_to :cliente
 
+has_many :facturas
+
 end

@@ -1,6 +1,6 @@
 <%= javascript_include_tag "facturas.js" %>
 
-<%= simple_form_for(@factura, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+<%= simple_form_for([@cotizacion,@factura], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 <br>
 <br>
 <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
@@ -19,6 +19,6 @@
   <%= f.input :valor, :label => "Valor",  :required => true %>
   <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>
-    <%= link_to 'Atras', facturas_path, :class => 'btn btn-inverse' %>
+    <%= link_to 'Atras', cotizacion_facturas_path(@cotizacion), :class => 'btn btn-inverse' %>
   </center>
 <% end %>

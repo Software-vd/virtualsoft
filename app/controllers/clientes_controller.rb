@@ -35,5 +35,4 @@ class ClientesController < ApplicationController
       @cliente = Cliente.find(params[:id])
       @cliente.destroy
   end
-  
-end
+  end

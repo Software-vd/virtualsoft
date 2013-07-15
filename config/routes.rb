@@ -19,6 +19,9 @@ Softmade::Application.routes.draw do
     resources :cotizaciones
   end
 
+  resources :cotizaciones do
+    resources :facturas
+  end
   
   resources :pedidos
   
@@ -30,9 +33,6 @@ Softmade::Application.routes.draw do
 
   
   resources :estadoentregas
-
-
-  resources :facturas
 
 
   resources :pagos

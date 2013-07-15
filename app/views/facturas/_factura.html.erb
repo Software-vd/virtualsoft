@@ -1,5 +1,5 @@
 <tr id=<%= "factura_#{factura.id}" %>>
-  <td><%= link_to factura.id, edit_factura_path(factura), :remote => true %></td>
+  <td><%= link_to factura.id, edit_cotizacion_factura_path(@cotizacion,factura), :remote => true %></td>
    <td><%= factura.fecha %></td>
    <td><%= factura.tipodoc_id %></td>
    <td><%= factura.numero_documento %></td>
@@ -9,12 +9,12 @@
    <td><%= factura.producto_id %></td>
    <td><%= factura.valor %></td>
    <td>
-    <%= link_to image_tag('ver.gif', :title => "mostrar"), factura, :remote => true, :class => 'btn btn-mini btn-success' %>
-   <%= link_to image_tag('editar.gif', :title => "editar"), edit_factura_path(factura), :remote => true,
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), cotizacion_factura_path(@cotizacion,factura), :remote => true, :class => 'btn btn-mini btn-success' %>
+   <%= link_to image_tag('editar.gif', :title => "editar"), edit_cotizacion_factura_path(@cotizacion,factura), :remote => true,
        :class => 'btn btn-mini btn-info' %>
-   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), factura, 
+   <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cotizacion_factura_path(@cotizacion,factura), 
        :data => { :confirm => 'Esta Seguro?' },
        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
-    <%= link_to 'Pdf', factura_path(factura, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
+    <%= link_to 'Pdf', cotizacion_factura_path(@cotizacion,factura, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
   </td>
 </tr>

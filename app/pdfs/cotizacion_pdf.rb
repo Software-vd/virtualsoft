@@ -50,7 +50,7 @@ class CotizacionPdf < Prawn::Document
     direccion = @cotizacion.direccion
     telefono = @cotizacion.telefono
     cantidad = @cotizacion.cantidad
-    articulos = @cotizacion.producto_id
+    producto = @cotizacion.producto_id
     valor = @cotizacion.valor
     table ([["Ciudad","Fecha"],
             ["#{ciudad}","#{fecha}"]]),
