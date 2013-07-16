@@ -4,7 +4,6 @@ class CreatePagos < ActiveRecord::Migration
       t.string :fecha
       t.string :nombres
       t.string :apellidos
-      t.integer :factura_id
       t.integer :estado_entrega_id
       t.string :valor
 

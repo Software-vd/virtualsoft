@@ -10,10 +10,6 @@
   <%= f.collection_select :estado_entrega_id, Estadoentrega.all, :id, :descripcion, prompt: "Estadoentrega"  %>
   <br>
   <br>
-  <%= f.label :factura_id %>:::
-  <%= f.collection_select :factura_id, Factura.all, :id, :cantidad, prompt: "Factura"  %>
-  <br>
-  <br>
   <%= f.input :valor, :label => "Valor",  :required => true %>
   <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>

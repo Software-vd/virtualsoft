@@ -1,14 +1,11 @@
 class Pago < ActiveRecord::Base
-  attr_accessible :apellidos, :fecha, :nombres, :estado_entrega_id, :factura_id, :valor
+  attr_accessible :apellidos, :fecha, :nombres, :estado_entrega_id, :valor
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")
   end
   
   validates :nombres, :apellidos, :presence => true, 
-  :length => { :maximum => 80 }
-
-  validates :factura_id, :presence => true, 
   :length => { :maximum => 80 }
 
   validates :valor, :presence => true, 

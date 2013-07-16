@@ -53,5 +53,4 @@ class CotizacionesController < ApplicationController
     @cliente = Cliente.find(params[:cliente_id])
     @cotizacion = Cotizacion.find(params[:id]) if params[:id]
   end
-  
 end

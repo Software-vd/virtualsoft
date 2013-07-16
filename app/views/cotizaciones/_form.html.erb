@@ -5,15 +5,16 @@
   <%= f.input :ciudad, :label => "Ciudad",  :required => true %>
   <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
   <%= f.label :tipodoc_id %>:::
-  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, prompt: "Tipodoc"  %>
+  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, prompt: "Tipodoc",  :required => true  %>
   <br>
   <br>
   <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
   <%= f.input :nombres, :label => "Nombres",  :required => true %>
-  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
+  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>  
   <%= f.input :direccion, :label => "Direccion",  :required => true %>
   <%= f.input :telefono, :label => "Telefono",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
+
   <%= f.label :producto_id %>:::
   <%= f.collection_select :producto_id, Producto.all, :id, :descripcion, :required => true, prompt: "Producto"%>
   <br>

@@ -26,4 +26,5 @@ class Factura < ActiveRecord::Base
   has_many :tipodocs
 
   belongs_to :cotizacion
+
 end

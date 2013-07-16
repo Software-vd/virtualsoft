@@ -1,7 +1,7 @@
 <%= simple_form_for(@cliente, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
   <br>
   <br>
-  <%= f.label :tipodoc_id %>
+  <%= f.label :tipodoc_id %>:::
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, :required => true, prompt: "Tipodoc"%>
   <br>
   <br>
