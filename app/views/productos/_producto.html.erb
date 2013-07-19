@@ -1,5 +1,7 @@
 <tr id=<%= "producto_#{producto.id}" %>>
   <td><%= link_to producto.id, edit_producto_path(producto), :remote => true %></td>
+  <td><%= producto.tipo_id %></td>
+  <td><%= producto.tamano_id %></td>
   <td><%= producto.descripcion %></td>
   <td><%= producto.valor %></td>
   <td>

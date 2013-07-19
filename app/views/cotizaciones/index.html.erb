@@ -29,6 +29,9 @@ Cotizacion
       <th>Cantidad</th>
       <th>Producto</th>
       <th>Valor</th>
+      <th>
+      <p align="right">Total = $<%= number_to_currency(@cotizaciones.sum(&:valor), :precision => 0, :unit => "", :delimiter => ".") %></p>
+      </th>
       <th></th>
     </tr>
   </thead>

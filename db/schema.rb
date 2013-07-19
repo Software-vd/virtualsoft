@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
   end
 
   create_table "productos", :force => true do |t|
+    t.integer  "tipo_id"
+    t.integer  "tamano_id"
     t.string   "descripcion"
     t.string   "valor"
     t.datetime "created_at",  :null => false

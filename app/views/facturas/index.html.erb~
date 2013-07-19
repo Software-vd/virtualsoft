@@ -33,7 +33,7 @@ Factura
    <%= render @facturas %>
   </tbody>
       <td>
-      <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:valor), :precision => 0, :unit => "", :delimiter => ".") %></p>
+      <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:valor) %></p>
       </td>
   <tfoot>
     <tr>

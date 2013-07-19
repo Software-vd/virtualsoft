@@ -1,5 +1,7 @@
 <%= simple_form_for(@producto, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
-
+  
+  <%= f.input :tamano_id, :label => "Tamaño",  :required => true %>
+  <%= f.input :tipo_id, :label => "Tipo",  :required => true %>
   <%= f.input :descripcion, :label => "Descripcion",  :required => true %>
   <%= f.input :valor, :label => "Valor",  :required => true %>
   <center>
