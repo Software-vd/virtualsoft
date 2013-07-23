@@ -7,7 +7,7 @@ class CotizacionPdf < Prawn::Document
     logo
     titulo
     deliver_details
-    tabla
+    deliver_details
     @cotizacion_details
   end
 
@@ -33,10 +33,7 @@ class CotizacionPdf < Prawn::Document
     #{@cotizacion.nombres}
     #{@cotizacion.apellidos}
     #{@cotizacion.direccion}
-    #{@cotizacion.telefono}
-    #{@cotizacion.cantidad}
-    #{@cotizacion.producto_id}
-    #{@cotizacion.valor} ", :size => 13
+    #{@cotizacion.telefono}", :size => 13
   end
 
   def deliver_details
@@ -49,9 +46,6 @@ class CotizacionPdf < Prawn::Document
     apellidos = @cotizacion.apellidos
     direccion = @cotizacion.direccion
     telefono = @cotizacion.telefono
-    cantidad = @cotizacion.cantidad
-    producto = @cotizacion.producto_id
-    valor = @cotizacion.valor
     table ([["Ciudad","Fecha"],
             ["#{ciudad}","#{fecha}"]]),
             :width => 500 do
@@ -69,29 +63,5 @@ class CotizacionPdf < Prawn::Document
             self.column_widths = {0 => 60, 2 => 60}
             columns(3).font_style = :bold
             end     
-  end
-
-
-  def tabla
-    move_down 60
-    ciudad = @cotizacion.ciudad
-    fecha = @cotizacion.fecha
-    tipodoc = @cotizacion.tipodoc_id
-    numero_documento = @cotizacion.numero_documento
-    nombres = @cotizacion.nombres
-    apellidos = @cotizacion.apellidos
-    direccion = @cotizacion.direccion
-    telefono = @cotizacion.telefono
-    cantidad = @cotizacion.cantidad
-    producto = @cotizacion.producto_id
-    valor = @cotizacion.valor
-    table ([["Cantidad","Producto","Valor"],
-            ["#{cantidad}","#{producto}","#{valor}"]]),
-            :width => 500 do
-            columns(1).align = :center
-            self.header = true
-            self.column_widths = {0 => 100, 2 => 50}
-            columns(3).font_style = :bold
-            end
   end
 end

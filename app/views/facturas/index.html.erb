@@ -32,14 +32,14 @@ Factura
   <tbody>
    <%= render @facturas %>
   </tbody>
-      <td>
-      <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:valor), :precision => 0, :unit => "", :delimiter => ".") %></p>
-      </td>
   <tfoot>
     <tr>
     </tr>
   </tfoot>
 </table>
+<td>
+      <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:valor), :precision => 0, :unit => "", :delimiter => ".") %></p>
+      </td>
  <center><td><%= link_to 'Nueva factura', new_cotizacion_factura_path, :class => 'btn btn-success', :remote => true %></td></center>
 <br />
 <br />

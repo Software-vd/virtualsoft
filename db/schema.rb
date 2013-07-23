@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521144453) do
+ActiveRecord::Schema.define(:version => 20130723151619) do
 
   create_table "clientes", :force => true do |t|
     t.integer  "tipodoc_id"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.datetime "updated_at",       :null => false
   end
 
+  create_table "cotizaciondetalles", :force => true do |t|
+    t.string   "producto_id"
+    t.float    "cantidad"
+    t.float    "subtotal"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "cotizaciones", :force => true do |t|
     t.string   "ciudad"
     t.string   "fecha"
@@ -35,9 +43,7 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "apellidos"
     t.string   "direccion"
     t.string   "telefono"
-    t.string   "cantidad"
-    t.string   "producto_id"
-    t.string   "valor"
+    t.integer  "cliente_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
@@ -64,7 +70,8 @@ ActiveRecord::Schema.define(:version => 20130521144453) do
     t.string   "apellidos"
     t.string   "cantidad"
     t.string   "producto_id"
-    t.string   "valor"
+    t.float    "valor"
+    t.integer  "cotizacion_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

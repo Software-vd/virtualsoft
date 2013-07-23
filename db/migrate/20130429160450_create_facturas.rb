@@ -9,6 +9,7 @@ class CreateFacturas < ActiveRecord::Migration
       t.string :cantidad
       t.string :producto_id
       t.float :valor
+      t.integer :cotizacion_id
 
       t.timestamps
     end

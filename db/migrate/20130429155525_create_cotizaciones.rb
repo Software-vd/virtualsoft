@@ -10,9 +10,7 @@ class CreateCotizaciones < ActiveRecord::Migration
       t.string :apellidos
       t.string :direccion
       t.string :telefono
-      t.string :cantidad
-      t.string :producto_id
-      t.float :valor
+      t.integer :cliente_id
 
       t.timestamps
     end

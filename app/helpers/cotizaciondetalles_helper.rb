@@ -1,0 +1,2 @@
+module CotizaciondetallesHelper
+end

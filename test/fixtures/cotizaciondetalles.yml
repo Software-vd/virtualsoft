@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  producto_id: MyString
+  cantidad: 1.5
+  subtotal: 1.5
+
+two:
+  producto_id: MyString
+  cantidad: 1.5
+  subtotal: 1.5

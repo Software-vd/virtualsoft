@@ -1,5 +1,5 @@
 class Cotizacion < ActiveRecord::Base
-  attr_accessible :apellidos, :fecha, :nombres, :numero_documento, :tipodoc_id, :valor, :ciudad, :direccion, :telefono, :cantidad, :producto_id
+  attr_accessible :apellidos, :fecha, :nombres, :numero_documento, :tipodoc_id, :ciudad, :direccion, :telefono, :cliente_id
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")
@@ -15,12 +15,7 @@ class Cotizacion < ActiveRecord::Base
   validates :tipodoc_id, :presence => true, 
   :length => { :maximum => 80 }
 
-  validates :valor, :presence => true, 
-  :length => { :maximum => 80 }
-
 has_many :tipodocs
-
-has_many :productos
 
 belongs_to :factura
 

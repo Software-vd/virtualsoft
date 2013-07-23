@@ -1,5 +1,5 @@
 class Factura < ActiveRecord::Base
-  attr_accessible :apellidos, :cantidad, :fecha, :nombres, :producto_id, :valor, :tipodoc_id, :numero_documento
+  attr_accessible :apellidos, :cantidad, :fecha, :nombres, :producto_id, :valor, :tipodoc_id, :numero_documento, :cotizacion_id
   
   def self.search(search)
    where('nombres like ?', "%#{search}%")

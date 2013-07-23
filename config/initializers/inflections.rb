@@ -30,6 +30,7 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'tipodoc', 'tipodocs'
   inflect.irregular 'user', 'users'
   inflect.irregular 'session', 'sessions'
+  inflect.irregular 'cotizaciondetalle', 'cotizaciondetalles'
 end
 
 
