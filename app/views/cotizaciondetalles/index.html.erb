@@ -1,49 +1,28 @@
-<h1>Listing cotizaciondetalles</h1>
-
-<table>
-  <tr>
-    <th>Producto</th>
-    <th>Cantidad</th>
-    <th>Subtotal</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @cotizaciondetalles.each do |cotizaciondetalle| %>
-  <tr>
-    <td><%= cotizaciondetalle.producto_id %></td>
-    <td><%= cotizaciondetalle.cantidad %></td>
-    <td><%= cotizaciondetalle.subtotal %></td>
-    <td><%= link_to 'Show', cotizaciondetalle %></td>
-    <td><%= link_to 'Edit', edit_cotizaciondetalle_path(cotizaciondetalle) %></td>
-    <td><%= link_to 'Destroy', cotizaciondetalle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Cotizaciondetalle', new_cotizaciondetalle_path %>
-
+<br><br><br><br><br><br><br><br>
+<hr>
 <%- model_class = Cotizaciondetalle -%>
+<center>
 <div class="page-header">
-  <h1>Equipos</h1>
+  <h1>Detalles</h1>
 </div>
+</center>
+<br><br><br><br><br><br><br><br>
 <table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
       <th>id</th>
-      <th>Nombre</th>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Subtotal</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-     <%= render @teams %>
+     <%= render @cotizaciondetalles %>
   </tbody>
   <tfoot>
     <tr>
-      <td><%= link_to 'Nuevo Equipo', new_team_path, :remote => true %></td>
+      <td><%= link_to 'Nuevo Detalle', new_cotizaciondetalle_path, :class => 'btn btn-success', :remote => true %></td>
     </tr>
   </tfoot>
 </table>

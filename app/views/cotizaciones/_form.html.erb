@@ -13,8 +13,10 @@
   <%= f.input :apellidos, :label => "Apellidos",  :required => true %>  
   <%= f.input :direccion, :label => "Direccion",  :required => true %>
   <%= f.input :telefono, :label => "Telefono",  :required => true %>
+
   <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', cliente_cotizaciones_path(@cliente), :class => 'btn btn-inverse' %>
   </center>
+  
 <% end %>
