@@ -1,9 +1,5 @@
 Softmade::Application.routes.draw do
 
-
-  
-
-
   resources :cotizaciondetalles
 
 

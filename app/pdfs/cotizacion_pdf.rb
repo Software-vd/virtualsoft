@@ -7,7 +7,6 @@ class CotizacionPdf < Prawn::Document
     logo
     titulo
     deliver_details
-    deliver_details
     @cotizacion_details
   end
 

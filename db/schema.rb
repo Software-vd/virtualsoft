@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(:version => 20130723151619) do
     t.string   "producto_id"
     t.float    "cantidad"
     t.float    "subtotal"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "cotizacion_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "cotizaciones", :force => true do |t|

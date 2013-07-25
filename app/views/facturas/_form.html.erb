@@ -8,9 +8,18 @@
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, :required => true, prompt: "Tipodoc"%>
   <br>
   <br>
-  <%= f.input :numero_documento, :label => "Numero_documento",  :required => true %>
-  <%= f.input :nombres, :label => "Nombres",  :required => true %>
-  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
+  <%= f.label :numero_documento %>:::
+  <%= f.collection_select :numero_documento, Cliente.all, :id, :numero_documento, prompt: "Numero documento",  :required => true  %>
+  <br>
+  <br>
+  <%= f.label :nombres %>:::
+  <%= f.collection_select :nombres, Cliente.all, :id, :nombres, prompt: "Nombres",  :required => true  %>
+  <br>
+  <br>
+  <%= f.label :apellidos %>:::
+  <%= f.collection_select :apellidos, Cliente.all, :id, :apellidos, prompt: "Apellidos",  :required => true  %>
+  <br>
+  <br>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
   <%= f.label :producto_id %>:::
   <%= f.collection_select :producto_id, Producto.all, :id, :descripcion, prompt: "Producto"  %>

@@ -8,7 +8,7 @@
   <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
   <%= f.input :encargado, :label => "Encargado",  :required => true %>
   <%= f.label :pagos_id %>:::
-  <%= f.collection_select :pagos_id, Pago.all, :id, :nombres, prompt: "Pago"  %>
+  <%= f.collection_select :pagos_id, Cliente.all, :id, :nombres, prompt: "Pago"  %>
   <br>
   <br>
   <center>

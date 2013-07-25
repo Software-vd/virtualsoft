@@ -8,7 +8,6 @@
   <td><%= cotizacion.apellidos %></td>
   <td><%= cotizacion.direccion %></td>
   <td><%= cotizacion.telefono %></td>
-  <td><%= cotizacion.cliente_id %></td>
   <td>
     <%= link_to image_tag('ver.gif', :title => "mostrar"), cliente_cotizacion_path(@cliente,cotizacion), :remote => true, :class => 'btn btn-mini btn-success' %>
    <%= link_to image_tag('editar.gif', :title => "editar"), edit_cliente_cotizacion_path(@cliente,cotizacion), :remote => true,

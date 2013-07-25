@@ -1,11 +1,10 @@
 <%- model_class = Cotizaciondetalle -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1>Cotizacion detalle</h1>
 </div>
 
 <div class='cotizaciondetalle'>
-  <p><%= @cotizaciondetalle.id %></p>
-  <p><%= @cotizaciondetalle.producto_id %></p>
-  <p><%= @cotizaciondetalle.cantidad %></p>
-  <p><%= @cotizaciondetalle.subtotal %></p>
+  <p>Producto <%= @cotizaciondetalle.producto_id %></p>
+  <p>Cantidad <%= @cotizaciondetalle.cantidad %></p>
+  <p>Subtotal <%= @cotizaciondetalle.subtotal %></p>
 </div>

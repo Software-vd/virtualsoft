@@ -2,7 +2,7 @@
 <center>
 <%- model_class = Factura -%>
 <div class="page-header">
-  <h1>Factura</h1>
+  <h1>Factura de <%= @cotizacion.nombres %><br><%= @cotizacion.apellidos %></h1>
 </div>
 <%= form_tag request.path, :method => 'get' do %>
 <%= content_tag :label do %>
