@@ -1,8 +1,5 @@
 Softmade::Application.routes.draw do
 
-  resources :cotizaciondetalles
-
-
   get "home" => "pages#index", :as => "home"
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
@@ -22,6 +19,7 @@ Softmade::Application.routes.draw do
   end
 
   resources :cotizaciones do
+    resources :cotizaciondetalles
     resources :facturas
   end
   

@@ -1,6 +1,6 @@
 <%= javascript_include_tag "cotizaciondetalles.js" %>
 
-<%= simple_form_for(@cotizaciondetalle, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+<%= simple_form_for([@cotizacion,@cotizaciondetalle], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
   <%= f.input :producto_id, :label => "Producto",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
@@ -8,7 +8,7 @@
   
   <center>
   <%= f.submit "guardar", :class => 'btn btn-info' %>
-  <%= link_to 'Atras', cotizaciondetalles_path, :class => 'btn btn-inverse' %>
+  <%= link_to 'Atras', cotizacion_cotizaciondetalles_path(@cotizacion), :class => 'btn btn-inverse' %>
   </center>
 
 <% end %>

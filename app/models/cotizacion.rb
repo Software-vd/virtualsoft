@@ -23,4 +23,6 @@ belongs_to :cliente
 
 has_many :facturas
 
+has_many :cotizaciondetalles
+
 end

@@ -1,13 +1,13 @@
 <tr id=<%= "cotizaciondetalle_#{cotizaciondetalle.id}" %>>
-  <td><%= link_to cotizaciondetalle.id, edit_cotizaciondetalle_path(cotizaciondetalle), :remote => true %></td>
+  <td><%= link_to cotizaciondetalle.id, edit_cotizacion_cotizaciondetalle_path(@cotizacion,cotizaciondetalle), :remote => true %></td>
   <td><%= cotizaciondetalle.producto_id %></td>
   <td><%= cotizaciondetalle.cantidad %></td>
   <td><%= cotizaciondetalle.subtotal %></td>
   <td>
-    <%= link_to image_tag('ver.gif', :title => "mostrar"), cotizaciondetalle, :remote => true, :class => 'btn btn-mini btn-success' %>
-    <%= link_to image_tag('editar.gif', :title => "editar"), edit_cotizaciondetalle_path(cotizaciondetalle), :remote => true,
+    <%= link_to image_tag('ver.gif', :title => "mostrar"), cotizacion_cotizaciondetalle_path(@cotizacion,cotizaciondetalle), :remote => true, :class => 'btn btn-mini btn-success' %>
+    <%= link_to image_tag('editar.gif', :title => "editar"), edit_cotizacion_cotizaciondetalle_path(@cotizacion,cotizaciondetalle), :remote => true,
         :class => 'btn btn-mini btn-info' %>
-    <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cotizaciondetalle, 
+    <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cotizacion_cotizaciondetalle_path(@cotizacion,cotizaciondetalle), 
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
   </td>

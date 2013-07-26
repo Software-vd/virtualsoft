@@ -16,6 +16,7 @@
        :data => { :confirm => 'Esta Seguro?' },
        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
     <%= link_to 'Pdf', cliente_cotizacion_path(@cliente,cotizacion, :format => 'pdf'), :class => 'btn btn-mini btn-inverse'%>
+    <%= link_to 'Detalles', cotizacion_cotizaciondetalles_path(cotizacion), :class => 'btn btn-success' %>
     <%= link_to 'Facturas', cotizacion_facturas_path(cotizacion), :class => 'btn btn-success' %>
   </td>
 </tr>
