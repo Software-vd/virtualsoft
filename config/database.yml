@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: softmade_development
+  database: virtualsoft_development
   pool: 5
   username: postgres
   password: postgres
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: softmade_test
+  database: virtualsoft_test
   pool: 5
   username: postgres
   password: postgres
@@ -51,7 +51,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: softmade_production
+  database: cirtualsoft_production
   pool: 5
   username: postgres
   password: postgres
