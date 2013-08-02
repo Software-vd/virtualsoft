@@ -51,7 +51,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: softmade_production
+  database: cirtualsoft_production
   pool: 5
   username: postgres
   password: postgres

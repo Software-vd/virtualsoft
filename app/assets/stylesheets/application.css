@@ -19,7 +19,6 @@
    background-image: url('cafe.jpg');
   border-radius: 5px;
   border: 1px solid #ccc;
-  box-shadow: 0 1px 5px #333;
   display: none;
   left: 49%;
   padding: 20px;
@@ -43,28 +42,22 @@
   padding: 0;
   border: 5px solid #222;
   border-radius: 0;
-  @include box-shadow(0 0 50px 10px cyan);
 }
 
 #lazybox.player {
   border: none;
   background: #222;
   border-radius: 0;
-  @include box-shadow(0 0 50px 10px magenta);
 }
 
 #lazybox.confirm {
   border-radius: 0;
   border: 3px solid #222;
-  @include box-shadow(0 0 50px 10px magenta);
-  @include linear-gradient(gray, #222);
   a#lazybox_close { display: none; }
 }
 
 #lazybox.custom {
-  @include linear-gradient(#222, #333);
   border: 1px solid #0E0E0E;
-  @include box-shadow(0 0 50px 10px magenta);
   a#lazybox_close {
     color: cyan;
     top: -10px;
@@ -74,16 +67,11 @@
   }
 }
 
-#lazybox.top {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
-
 
 #lazybox.sticker {
  -webkit-border-bottom-left-radius: 20px 500px;
  -webkit-border-bottom-right-radius: 500px 30px;
- -webkit-borblockquote der-top-right-radius: 5px 100px;
+ -webkit-borblockquote-top-right-radius: 5px 100px;
  -moz-border-radius-bottomleft: 20px 500px;
  -moz-border-radius-bottomright: 500px 30px;
  -moz-border-radius-topright: 5px 100px;
@@ -107,7 +95,6 @@ img#config{
   margin-left: 330px;
 }
 
-}
 
       body{
         background-color: red;
