@@ -20,11 +20,11 @@ development:
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: 5433
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  
+
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -41,19 +41,19 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: virtualsoft_test
+  database: virtualsoft_development
   pool: 5
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: 5433
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: cirtualsoft_production
+  database: virtualsoft_development
   pool: 5
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: 5433
