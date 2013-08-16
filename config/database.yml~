@@ -51,7 +51,15 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
+<<<<<<< HEAD
   database: virtualsoft_production
+=======
+<<<<<<< HEAD
+  database: virtualsoft_development
+=======
+  database: cirtualsoft_production
+>>>>>>> 535dd993ff4510116e3af599798433c73bbae54e
+>>>>>>> 3eb2cc9e056780ed8776b95b9f03579d906f0bdd
   pool: 5
   username: postgres
   password: postgres
