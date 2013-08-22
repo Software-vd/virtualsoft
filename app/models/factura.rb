@@ -1,21 +1,15 @@
 class Factura < ActiveRecord::Base
-  attr_accessible :apellidos, :cantidad, :fecha, :nombres, :producto_id, :valor, :tipodoc_id, :numero_documento, :cotizacion_id
+  attr_accessible :cantidad, :fecha, :producto_id, :subtotal, :cotizacion_id
   
   def self.search(search)
-   where('nombres like ?', "%#{search}%")
+   where('cantidad like ?', "%#{search}%")
   end
-  
-  validates :nombres, :apellidos, :presence => true,
-  :length => { :maximum => 80 }
-  
-  validates :cantidad, :presence => true,
-  :length => { :maximum => 3 }
 
-  validates :producto_id, :presence => true,
-  :length => { :maximum => 1 }
+  validates_presence_of :fecha
+  validates_presence_of :cantidad
+  validates_presence_of :producto_id
+  validates_presence_of :subtotal
 
-  validates :valor, :presence => true,
-  :length => { :maximum => 10 }
 
   has_many :cotizaciones
 

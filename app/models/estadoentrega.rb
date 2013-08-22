@@ -1,9 +1,8 @@
 class Estadoentrega < ActiveRecord::Base
 	has_many :despachos
   attr_accessible :descripcion
-  
-  validates :descripcion, :presence => true, 
-  :length => { :maximum => 10 }
+
+  validates_presence_of :descripcion
 
   belongs_to :despacho
 

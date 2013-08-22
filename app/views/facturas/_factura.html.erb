@@ -1,13 +1,9 @@
 <tr id=<%= "factura_#{factura.id}" %>>
   <td><%= link_to factura.id, edit_cotizacion_factura_path(@cotizacion,factura), :remote => true %></td>
    <td><%= factura.fecha %></td>
-   <td><%= factura.tipodoc_id %></td>
-   <td><%= factura.numero_documento %></td>
-   <td><%= factura.nombres %></td>
-   <td><%= factura.apellidos %></td>
    <td><%= factura.cantidad %></td>
    <td><%= factura.producto_id %></td>
-   <td><%= factura.valor %></td>
+   <td><%= factura.subtotal %></td>
    <td>
     <%= link_to image_tag('ver.gif', :title => "mostrar"), cotizacion_factura_path(@cotizacion,factura), :remote => true, :class => 'btn btn-mini btn-success' %>
    <%= link_to image_tag('editar.gif', :title => "editar"), edit_cotizacion_factura_path(@cotizacion,factura), :remote => true,

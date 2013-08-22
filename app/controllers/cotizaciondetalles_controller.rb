@@ -15,7 +15,12 @@ class CotizaciondetallesController < ApplicationController
   end
 
   def show
-      
+    if params[:format] == 'pdf' then
+      pdf = CotizaciondetallePdf.new(@cliente,@cotizacion,@cotizaciondetalle, view_context)
+      send_data pdf.render, filename:
+      "cotizaciondetalle_#{@cotizaciondetalle.id}.pdf",
+      type: "application/pdf", :disposition => "inline"
+    end
   end
 
   def new

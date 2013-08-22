@@ -2,7 +2,7 @@
 <center>
 <%- model_class = Factura -%>
 <div class="page-header">
-  <h1>Factura de <%= @cotizacion.nombres %><br><%= @cotizacion.apellidos %></h1>
+  <h1>Factura de <%= @cotizacion.cliente.nombres %><br><%= @cotizacion.cliente.apellidos %></h1>
 </div>
 <%= form_tag request.path, :method => 'get' do %>
 <%= content_tag :label do %>
@@ -19,13 +19,9 @@ Factura
     <tr>
       <th>id</th>
       <th>Fecha</th>
-      <th>Tipodoc</th>
-      <th>Numero documento</th>
-      <th>Nombres</th>
-      <th>Apellidos</th>
       <th>Cantidad</th>
       <th>Productos</th>
-      <th>Valor</th>
+      <th>Subtotal</th>
        <th></th>
     </tr>
   </thead>
@@ -38,7 +34,7 @@ Factura
   </tfoot>
 </table>
 <td>
-      <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:valor), :precision => 0, :unit => "", :delimiter => ".") %></p>
+      <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:subtotal), :precision => 0, :unit => "", :delimiter => ".") %></p>
       </td>
  <center><td><%= link_to 'Nueva factura', new_cotizacion_factura_path, :class => 'btn btn-success', :remote => true %></td></center>
 <br />

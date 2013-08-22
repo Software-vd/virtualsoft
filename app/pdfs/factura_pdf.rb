@@ -1,8 +1,10 @@
 class FacturaPdf < Prawn::Document
 
- def initialize(factura,view)
+ def initialize(cliente,cotizacion,factura,view)
        super()
        @factura = factura
+       @cotizacion = cotizacion
+       @cliente = cliente
        @view = view
        logo
        titulo
@@ -28,25 +30,22 @@ def titulo
    move_down 60
    text "Factura:
     #{factura.fecha}
-    #{factura.tipodoc_id}
-    #{factura.numero_documento}
-    #{factura.nombres}
-    #{factura.apellidos}
+    #{@cotizacion.cliente.tipodoc_id}
+    #{@cotizacion.cliente.numero_documento}
+    #{@cotizacion.cliente.nombres}
+    #{@cotizacion.cliente.apellidos}
     #{factura.cantidad}
-    #{factura.producto_id}
-    #{factura.valor} ", :size => 13
+    #{@cotizaciondetalle.producto_id}
+    #{factura.subtotal} ", :size => 13
  end
 
   def deliver_details
    move_down 60
    fecha = @factura.fecha
-   tipodoc = @factura.tipodoc_id
-   numero_documento = @factura.numero_documento
-   nombres = @factura.nombres
-   apellidos = @factura.apellidos
-   cantidad = @factura.cantidad
-   producto = @factura.producto_id
-   valor = @factura.valor
+   tipodoc = @cotizacion.cliente.tipodoc_id
+   numero_documento = @cotizacion.cliente.numero_documento
+   nombres = @cotizacion.cliente.nombres
+   apellidos = @cotizacion.cliente.apellidos
    table ([["Fecha","Tipodoc","Numero_documento","Nombres","Apellidos"],
            ["#{fecha}","#{tipodoc}","#{numero_documento}","#{nombres}","#{apellidos}"]]),
            :width => 500 do
@@ -66,13 +65,13 @@ def titulo
                apellidos = @factura.apellidos
                cantidad = @factura.cantidad
                producto = @factura.producto_id
-               valor = @factura.valor
-               table ([["Cantidad","Producto","Valor"],
-                       ["#{cantidad}","#{producto}","#{valor}"]]),
+               subtotal = @factura.subtotal
+               table ([["Cantidad","Producto","Subtotal"],
+                       ["#{cantidad}","#{producto}","#{subtotal}"]]),
                :width => 500 do
                        columns(1).align = :center
                        self.header = true
-                       self.column_widths = {0 => 100, 2 => 50}
+                       self.column_widths = {0 => 100, 2 => 70}
                        columns(3).font_style = :bold
                end        
        end

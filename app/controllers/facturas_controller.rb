@@ -15,9 +15,8 @@ class FacturasController < ApplicationController
   end
 
   def show
-
       if params[:format] == 'pdf' then
-      pdf = FacturaPdf.new(@factura, view_context)
+      pdf = FacturaPdf.new(@cliente,@cotizacion,@factura, view_context)
       send_data pdf.render, filename:
       "factura_#{@factura.id}.pdf",
       type: "application/pdf", :disposition => "inline"

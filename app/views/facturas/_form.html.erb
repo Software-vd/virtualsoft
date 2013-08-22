@@ -4,28 +4,12 @@
 <br>
 <br>
 <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
-  <%= f.label :tipodoc_id %>:::
-  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, :required => true, prompt: "Tipodoc"%>
-  <br>
-  <br>
-  <%= f.label :numero_documento %>:::
-  <%= f.collection_select :numero_documento, Cliente.all, :id, :numero_documento, prompt: "Numero documento",  :required => true  %>
-  <br>
-  <br>
-  <%= f.label :nombres %>:::
-  <%= f.collection_select :nombres, Cliente.all, :id, :nombres, prompt: "Nombres",  :required => true  %>
-  <br>
-  <br>
-  <%= f.label :apellidos %>:::
-  <%= f.collection_select :apellidos, Cliente.all, :id, :apellidos, prompt: "Apellidos",  :required => true  %>
-  <br>
-  <br>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
   <%= f.label :producto_id %>:::
   <%= f.collection_select :producto_id, Producto.all, :id, :descripcion, prompt: "Producto"  %>
   <br>
   <br>
-  <%= f.input :valor, :label => "Valor",  :required => true %>
+  <%= f.input :subtotal, :label => "Subtotal",  :required => true %>
   <center>
     <%= f.submit "guardar", :class => 'btn btn-info' %>
     <%= link_to 'Atras', cotizacion_facturas_path(@cotizacion), :class => 'btn btn-inverse' %>

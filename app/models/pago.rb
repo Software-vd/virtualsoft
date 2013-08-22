@@ -5,11 +5,10 @@ class Pago < ActiveRecord::Base
    where('nombres like ?', "%#{search}%")
   end
   
-  validates :nombres, :apellidos, :presence => true, 
-  :length => { :maximum => 80 }
-
-  validates :valor, :presence => true, 
-  :length => { :maximum => 80 }
+  validates_presence_of :nombres
+  validates_presence_of :apellidos
+  validates_presence_of :valor
+  validates_presence_of :estado_entrega_id
 
   belongs_to :despacho
 

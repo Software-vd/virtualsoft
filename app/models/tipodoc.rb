@@ -1,8 +1,7 @@
 class Tipodoc < ActiveRecord::Base
   attr_accessible :descripcion
-  
-  validates :descripcion, :presence => true,
-  :length => { :maximum => 100 }
+
+  validates_presence_of :descripcion
 
   belongs_to :cliente
 

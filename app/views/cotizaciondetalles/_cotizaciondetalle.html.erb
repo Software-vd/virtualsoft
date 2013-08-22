@@ -10,5 +10,6 @@
     <%= link_to image_tag('eliminar.gif', :title => "eliminar"), cotizacion_cotizaciondetalle_path(@cotizacion,cotizaciondetalle), 
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+    <%= link_to 'Pdf', cotizacion_cotizaciondetalle_path(@cotizacion,cotizaciondetalle, :format => 'pdf'), :class => 'btn btn-mini btn-inverse' %>
   </td>
 </tr>

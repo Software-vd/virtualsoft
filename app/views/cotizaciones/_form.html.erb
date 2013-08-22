@@ -1,22 +1,13 @@
 <%= javascript_include_tag "cotizaciones.js" %>
 
 <%= simple_form_for([@cliente,@cotizacion], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
-  
-  <%= f.input :ciudad, :label => "Ciudad",  :required => true %>
-  <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
-  <%= f.label :tipodoc_id %>:::
-  <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :descripcion, prompt: "Tipodoc",  :required => true  %>
-  <br>
-  <br>
-  <%= f.input :numero_documento, :label => "Numero documento",  :required => true %>
-  <%= f.input :nombres, :label => "Nombres",  :required => true %>
-  <%= f.input :apellidos, :label => "Apellidos",  :required => true %>
-  <%= f.input :direccion, :label => "Direccion",  :required => true %>
-  <%= f.input :telefono, :label => "Telefono",  :required => true %>
+ 
+ <%= f.input :ciudad, :label => "Ciudad",  :required => true %>
+ <%= f.input :fecha, :label => "Fecha",  :required => true, :input_html => { :class => 'datepicker' } %>
 
-  <center>
-    <%= f.submit "guardar", :class => 'btn btn-info' %>
-    <%= link_to 'Atras', cliente_cotizaciones_path(@cliente), :class => 'btn btn-inverse' %>
-  </center>
-  
+ <center>
+   <%= f.submit "guardar", :class => 'btn btn-info' %>
+   <%= link_to 'Atras', cliente_cotizaciones_path(@cliente), :class => 'btn btn-inverse' %>
+ </center>
+ 
 <% end %>
