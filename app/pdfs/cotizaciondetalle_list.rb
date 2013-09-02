@@ -1,56 +1,4 @@
-class CotizaciondetallesController < ApplicationController
-
-  before_filter :require_login
-
-  before_filter :relacionar
-  
-  layout 'fondo'
-  
-  def index
-    @cotizaciondetalles = @cotizacion.cotizaciondetalles.all
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @cotizaciondetalles }
-      format.pdf { output = DetallePdf.new(@cliente, @cotizacion, @cotizaciondetalles, view_context)
-       send_data output.render, :filename => "detalles.pdf", :type => "application/pdf", 
-                                :disposition => "inline" }
-    end
-  end
-
-  def show
-  end
-
-  def new
-      @cotizaciondetalle = Cotizaciondetalle.new
-  end
-
-  def edit
-     
-  end
-
-  def create
-      @cotizaciondetalle = Cotizaciondetalle.new(params[:cotizaciondetalle])
-      @cotizaciondetalle.cotizacion_id = @cotizacion.id
-      render :action => :new unless @cotizaciondetalle.save
-  end
-
-  def update
-      
-      render :action => :edit unless @cotizaciondetalle.update_attributes(params[:cotizaciondetalle])
-  end
-
-  def destroy
-      
-      @cotizaciondetalle.destroy
-  end
-  
-  def relacionar
-     @cotizacion = Cotizacion.find(params[:cotizacion_id])
-     @cotizaciondetalle = Cotizaciondetalle.find(params[:id]) if params[:id]
-  end
-end
-
-class DetallePdf < Prawn::Document
+class CotizaciondetallePdf < Prawn::Document
 
   def initialize(cliente,cotizacion,cotizaciondetalle,view)
     super()
@@ -60,21 +8,10 @@ class DetallePdf < Prawn::Document
     @view = view
     logo
     titulo
+    registro
     deliver_details
+    detalle
     @cotizaciondetalle_details
-    cotizacion_details
-    @total = @cotizaciondetalle.sum(&:subtotal)
-    total
-  end
-
-  def cotizacion_details
-  move_down 50
-  table registro, :width => 500 do
-            columns(1).align = :center
-            self.header = true
-            self.column_widths = {0 => 100, 2 => 60}
-            columns(3).font_style = :bold
-            end  
   end
 
  def logo
@@ -83,16 +20,11 @@ class DetallePdf < Prawn::Document
     move_down 10
   end
 
-def total
-   move_down 40
-   text "subtotal  #{@total}"
-  end
   
   def registro
    move_down 20
-   [["Producto", "Cantidad", "Subtotal"]] +
    @cotizaciondetalle.map do |c| 
-   [ "#{c.producto_id}", "#{c.cantidad}", "#{c.subtotal}" ]
+   text "#{c.producto_id}    #{c.cantidad}    #{c.subtotal}"
    end
   end
 
@@ -145,5 +77,19 @@ def total
             end       
   end
 
+  def detalle
+    move_down 60
+    cantidad = @cotizaciondetalle.cantidad
+    producto = @cotizaciondetalle.producto_id
+    subtotal = @cotizaciondetalle.subtotal
 
+  table ([["Cantidad","Producto","Subtotal"],
+            ["#{cantidad}","#{producto}","#{subtotal}"]]),
+            :width => 500 do
+            columns(1).align = :center
+            self.header = true
+            self.column_widths = {0 => 100, 2 => 60}
+            columns(3).font_style = :bold
+            end      
+  end
 end

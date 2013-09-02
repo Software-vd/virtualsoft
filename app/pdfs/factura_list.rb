@@ -1,31 +1,41 @@
-class CotizaciondetallePdf < Prawn::Document
+class FacturaList < Prawn::Document
 
-  def initialize(cliente,cotizacion,cotizaciondetalle,view)
+  def initialize(cliente,cotizacion,facturas,view)
     super()
-    @cotizaciondetalle = cotizaciondetalle
+    @factura = facturas
     @cotizacion = cotizacion
     @cliente = cliente
     @view = view
     logo
     titulo
+    registro
     deliver_details
     detalle
-    @cotizaciondetalle_details
+    @factura_details
   end
 
-  def logo
+ def logo
     logopath ="#{Rails.root}/app/assets/images/logo.png"
     image logopath, :width => 50,:heigth => 20
     move_down 10
   end
- 
-  def titulo
+
+  
+  def registro
+   move_down 20
+   @factura.map do |c| 
+   text "#{c.producto_id}    #{c.cantidad}    #{c.subtotal}"
+   end
+  end
+
+
+ def titulo
     draw_text "ASERRIO LA ARBOLEDA",:at => [100,650],size:30
     draw_text "Calle 45A(padilla) No.55-86 Tels. 513 07 81 - 231 92 68",:at => [90,632],size:15
     draw_text "Medellin-Colombia",:at => [210,616],size:15
   end
 
-  def deliver_details
+def deliver_details
     move_down 60
     text "Cotizaciondetalle:
     #{@cotizacion.ciudad}
@@ -33,12 +43,7 @@ class CotizaciondetallePdf < Prawn::Document
     #{@cotizacion.cliente.tipodoc_id}
     #{@cotizacion.cliente.numero_documento}
     #{@cotizacion.cliente.nombres}
-    #{@cotizacion.cliente.apellidos}
-    #{@cotizacion.cliente.direccion}
-    #{@cotizacion.cliente.telefono}
-    #{@cotizaciondetalle.producto_id}
-    #{@cotizaciondetalle.cantidad}
-    #{@cotizaciondetalle.subtotal}", :size => 13
+    #{@cotizacion.cliente.apellidos}", :size => 13
   end
 
   def deliver_details
@@ -49,8 +54,6 @@ class CotizaciondetallePdf < Prawn::Document
     numero_documento = @cotizacion.cliente.numero_documento
     nombres = @cotizacion.cliente.nombres
     apellidos = @cotizacion.cliente.apellidos
-    direccion = @cotizacion.cliente.direccion
-    telefono = @cotizacion.cliente.telefono
     table ([["Ciudad","Fecha"],
             ["#{ciudad}","#{fecha}"]]),
             :width => 500 do
@@ -60,8 +63,8 @@ class CotizaciondetallePdf < Prawn::Document
             columns(3).font_style = :bold
             end 
 
-    table ([["Tipodoc","N. documento","Nombres","Apellidos","Direccion","Telefono"],
-            ["#{tipodoc}","#{numero_documento}","#{nombres}","#{apellidos}","#{direccion}","#{telefono}"]]),
+    table ([["Tipodoc","N. documento","Nombres","Apellidos"],
+            ["#{tipodoc}","#{numero_documento}","#{nombres}","#{apellidos}"]]),
             :width => 500 do
             columns(1).align = :center
             self.header = true
@@ -69,12 +72,11 @@ class CotizaciondetallePdf < Prawn::Document
             columns(3).font_style = :bold
             end       
   end
-
   def detalle
     move_down 60
-    cantidad = @cotizaciondetalle.cantidad
-    producto = @cotizaciondetalle.producto_id
-    subtotal = @cotizaciondetalle.subtotal
+    cantidad = @factura.cantidad
+    producto = @factura.producto_id
+    subtotal = @factura.subtotal
 
   table ([["Cantidad","Producto","Subtotal"],
             ["#{cantidad}","#{producto}","#{subtotal}"]]),

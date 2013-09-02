@@ -16,13 +16,7 @@ layout 'fondo'
  end
 
  def show
-     
-     if params[:format] == 'pdf' then
-     pdf = CotizacionPdf.new(@cotizacion, view_context)
-     send_data pdf.render, filename:
-     "cotizacion_#{@cotizacion.id}.pdf",
-     type: "application/pdf", :disposition => "inline"
-   end
+  
  end
 
  def new

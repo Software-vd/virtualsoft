@@ -34,17 +34,16 @@ Nombre Cliente:
   <tfoot>
     <tr>
       <td><%= link_to 'Nuevo Cliente', new_cliente_path, :class => 'btn btn-success', :remote => true %></td>
-    
-    <td>
-      Total Clientes : <%= @clientes.total_entries %>
-    </td>
     </tr>
   </tfoot>
 </table>
-<br />
-<br />
 <div align="center">
 <%= will_paginate @clientes, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' rescue :nil%>
 </div>
+<p>
+<center>
+Total Clientes : <%= @clientes.total_entries %>
+</center>
+</p>
 

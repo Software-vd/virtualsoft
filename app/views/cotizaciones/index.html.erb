@@ -25,24 +25,21 @@ Cotizacion
     </tr>
   </thead>
   <tbody>
-     <%= render @cotizaciones %>
+    <%= render @cotizaciones %>
   </tbody>
   <tfoot>
     <tr>
+      <td><%= link_to 'Nueva cotizacion', new_cliente_cotizacion_path(@cliente), :class => 'btn btn-success' , :remote => true %></td>
+      <td><%= link_to 'Atras', clientes_path, :class => 'btn btn-info' %></td>
     </tr>
   </tfoot>
 </table>
-</center>
-<td><%= link_to 'Nueva cotizacion', new_cliente_cotizacion_path(@cliente), :class => 'btn btn-success', :remote => true %></td>
-<br />
-<br />
-<%= link_to 'Atras', clientes_path, :class => 'btn btn-inverse' %>
 <div align="center">
 <%= will_paginate @cotizaciones, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 </div>
 <p>
-  <center>
+<center>
 Total Cotizaciones : <%= @cotizaciones.total_entries %>
 </center>
 </p>

@@ -2,10 +2,7 @@
 
 <%= simple_form_for([@cotizacion,@cotizaciondetalle], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
-  <%= f.label :producto_id %>:::
-  <%= f.collection_select :producto_id, Producto.all, :id, :descripcion, prompt: "Producto"  %>
-  <br>
-  <br>
+  <%= f.input :producto_id, :label => "Producto",  :required => true %>
   <%= f.input :cantidad, :label => "Cantidad",  :required => true %>
   <%= f.input :subtotal, :label => "Subtotal",  :required => true %>
   

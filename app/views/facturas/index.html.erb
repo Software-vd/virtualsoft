@@ -13,7 +13,7 @@ Factura
 <% end %>
 </center>
 <hr>
-<br><br><br><br><br><br><br><br>
+<br><br><br><br>
 <table class="table table-striped table-bordered table-condensed">
   <thead>
     <tr>
@@ -30,15 +30,16 @@ Factura
   </tbody>
   <tfoot>
     <tr>
+       <td><%= link_to 'Nueva factura', new_cotizacion_factura_path, :class => 'btn btn-success', :remote => true %></td>
+ <td><%= link_to 'Pdf', cotizacion_facturas_path(@cotizacion, :format => :pdf), :class => 'btn btn-inverse' %></td>
+ <td><%= link_to 'Atras', cotizaciones_path, :class => 'btn btn-info' %></td>
     </tr>
   </tfoot>
 </table>
 <td>
       <p align="right">Total = $<%= number_to_currency(@facturas.sum(&:subtotal), :precision => 0, :unit => "", :delimiter => ".") %></p>
       </td>
- <center><td><%= link_to 'Nueva factura', new_cotizacion_factura_path, :class => 'btn btn-success', :remote => true %></td></center>
-<br />
-<br />
+
 <div align="center">
 <%= will_paginate @facturas, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
