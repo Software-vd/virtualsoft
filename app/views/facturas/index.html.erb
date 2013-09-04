@@ -32,7 +32,7 @@ Factura
     <tr>
        <td><%= link_to 'Nueva factura', new_cotizacion_factura_path, :class => 'btn btn-success', :remote => true %></td>
  <td><%= link_to 'Pdf', cotizacion_facturas_path(@cotizacion, :format => :pdf), :class => 'btn btn-inverse' %></td>
- <td><%= link_to 'Atras', cotizaciones_path, :class => 'btn btn-info' %></td>
+ <td><%= link_to 'Atras', cliente_cotizaciones_path(@cotizacion.cliente_id), :class => 'btn btn-info' %></td>
     </tr>
   </tfoot>
 </table>
