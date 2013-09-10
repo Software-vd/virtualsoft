@@ -85,7 +85,7 @@ class DetallePdf < Prawn::Document
 
 def total
    move_down 40
-   text "subtotal  #{@total}"
+   text "Total  #{@total}"
   end
   
   def registro

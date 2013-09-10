@@ -3,7 +3,7 @@
 <%- model_class = Cotizaciondetalle -%>
 <center>
 <div class="page-header">
-  <h1>Detalles</h1>
+  <h1>Detalle de <%= @cotizacion.cliente.nombres %><br><%= @cotizacion.cliente.apellidos %></h1>
 </div>
 </center>
 <br><br><br><br><br><br><br><br>
@@ -28,3 +28,6 @@
     </tr>
   </tfoot>
 </table>
+<td>
+  <p align="right">Total = $<%= number_to_currency(@cotizaciondetalles.sum(&:subtotal), :precision => 0, :unit => "", :delimiter => ".") %></p>
+</td>
